@@ -16,7 +16,7 @@
         <div class="column box">
             <a href="/kian/light">Light Sequence Minilab</a>
             <input type="button" onclick="imagefun()" value="Change Image"><br>
-    <img src="/src/main/staticin/static/images/bulb_on.jpg" th:src="@{/images/bulb_on.jpg}" width="100" height="auto" id="getImage"><br>
+    <img src="images/kian.jpg" width="100" height="auto" id="getImage"><br>
             </div>
         <div class="column box">
             <div style="text-align:center">
@@ -61,11 +61,11 @@
 
         function imagefun() {
             var Image_Id = document.getElementById('getImage');
-            if (Image_Id.src.match("/images/bulb_on.jpg")) {
+            if (Image_Id.src.match("/images/kian.jpg")) {
                 Image_Id.src = "/images/burnt.jpeg";
             }
             else {
-                Image_Id.src = "/images/bulb_on.jpg";
+                Image_Id.src = "/images/kian.jpg";
             }
 
         }
