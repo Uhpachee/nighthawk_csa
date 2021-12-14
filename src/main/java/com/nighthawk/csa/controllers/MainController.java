@@ -1,4 +1,4 @@
-package com.nighthawk.csa;
+package com.nighthawk.csa.controllers;
 
 import com.nighthawk.csa.starters.ImageInfo;
 import org.springframework.stereotype.Controller;
