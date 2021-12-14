@@ -1,6 +1,6 @@
 <!DOCTYPE HTML>
 <!-- Signals to the Layout Dialect which layout should be used to decorate this View -->
-<html xmlns:layout="http://www.w3.org/1999/xhtml" xmlns:th="http://www.w3.org/1999/xhtml" lang="en">
+<html xmlns:layout="http://www.w3.org/1999/xhtml" xmlns:th="http://www.w3.org/1999/xhtml"
 
 <head style="text-align: center; color: #9daf9b">
     <div th:replace="fragments/head1 :: header"></div>
@@ -31,18 +31,71 @@
 <h1 style="text-align: center; margin-top: 1%; text-color: white; color: white"><strong id=>Shekar About Us Page</strong></h1>
 
 
-
 <h1 style="color: green; text-color: green; font-size:30px">My name is Shekar and this is my about us page</h1>
 <h1 style="color: green; text-color: green; font-size:30px">I am a collaborator on this project as well</h1>
-<img src="/src/main/static/images/shekar.PNG" th:src="@{/images/shekar.PNG}" width="150px" height="200px" class="face" alt="shekar" style="height:200px; width:150px">
-
-
+<div>
+<img src="/src/main/staticin/static/images/ncs_logo.jpg" th:src="@{/images/ncs_logo.jpg}" width="100" height="auto" id="getImage"><br>
+<input type="button" onclick="switchpicture()" value="Change Image"><br>
+</div>
 <center>
     <div class="container-fluid">
         <div class="ns-card">
             <h1>I love Technology!</h1>
 
         </div></div></center>
+
+<script>
+    const myElement = document.getElementById("demo");
+
+    function getLocation() {
+        if (navigator.geolocation) {
+            navigator.geolocation.getCurrentPosition(showPosition);
+        } else {
+            myElement.innerHTML = "Geolocation is not supported by this browser.";
+        }
+    }
+
+    function showPosition(position) {
+        myElement.innerHTML = "Latitude: " + position.coords.latitude +
+            "<br>Longitude: " + position.coords.longitude;
+    }
+
+    function switchpicture() {
+        var Image_Id = document.getElementById('getImage');
+        if (Image_Id.src.match("/images/ncs_logo.jpg")) {
+            Image_Id.src = "/images/logo.png";
+        }
+        else {
+            Image_Id.src = "/images/ncs_logo.jpg";
+        }
+
+    }
+
+    function productsAdd() {
+        $("#productTable tbody").append("<tr>" +
+            "<td>Abhijay</td>" +
+            "<td>Yes</td>" +
+            "<td>No</td>" +
+            "</tr>");
+    }
+
+    function clickCounter() {
+        if(typeof(Storage) !== "undefined") {
+            if (localStorage.clickcount) {
+                localStorage.clickcount = Number(localStorage.clickcount)+1;
+            } else {
+                localStorage.clickcount = 1;
+            }
+        } else {
+            document.getElementById("result").innerHTML = "Sorry, your browser does not support web storage...";
+        }
+    }
+    function reloadData(){
+        for (let i = 1; i <= localStorage.clickcount; i++) {
+            productsAdd();
+        }
+    }
+</script>
 
 <style>
     a{
@@ -99,4 +152,7 @@
 </style>
 
 </body>
+
+
+
 </html>
