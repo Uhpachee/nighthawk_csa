@@ -41,6 +41,9 @@ public class MainController {
         return "starters/image";
     }
 
+    @GetMapping("/hackathon")
+        public String hackathon() { return "hackathon"; }
+
     @GetMapping("/image/grayscale")
     public String image_grayscale(Model model) {
         //String web_server = "http://localhost:8080/";
