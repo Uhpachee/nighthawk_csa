@@ -8,7 +8,7 @@
 <!-- <head> -->
 <div layout:fragment="head" th:remove="tag">
     <!-- Page specific head additions -->
-    <title>Person List</title>
+    <title>Game List</title>
 </div>
 <head>
 <!-- <body> -->
@@ -17,17 +17,17 @@
     <div class="container">
 
         <div class="row justify-content-md-center">
-            <h1>SQL Person List</h1>
+            <h1>Games</h1>
         </div>
         <div class="row justify-content-md-center">
-            <a th:href="@{/data/personcreate/}">Create Person</a>
+            <a th:href="@{/data/personcreate/}">Add Game</a>
         </div>
 
         <table class="table table-bordered">
             <thead>
             <tr>
                 <th>Game Number</th>
-                <th>Person</th>
+                <th>Game</th>
                 <th>Rating</th>
                 <th>Action</th>
             </tr>
