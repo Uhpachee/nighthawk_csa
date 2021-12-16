@@ -17,10 +17,8 @@ This class has an instance of Java Persistence API (JPA)
 public class PersonSqlRepository {
 
     @Autowired
-    private PersonJpaRepository jpa;
+    private GameJpaRepository jpa;
 
-    @Autowired
-    private ScrumTeamSqlRepository scrum_team_jpa;
 
     public  List<Person>listAll() {
         return jpa.findAll();
@@ -32,10 +30,7 @@ public class PersonSqlRepository {
     }
 
     // custom query to find anything containing term in name or email ignoring case
-    public  List<Person>listLikeNative(String term) {
-        String like_term = String.format("%%%s%%",term);  // Like required % rappers
-        return jpa.findByLikeTermNative(like_term);
-    }
+
 
     public void save(Person person) {
         jpa.save(person);
@@ -48,7 +43,6 @@ public class PersonSqlRepository {
     }
 
     public void delete(long id) {
-        scrum_team_jpa.member_deleted(id);
         jpa.deleteById(id);
     }
 }

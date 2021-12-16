@@ -3,16 +3,16 @@
 <!-- Signals to the Layout Dialect which layout should be used to decorate this View -->
 <html xmlns:layout="http://www.w3.org/1999/xhtml"
       xmlns:th="http://www.w3.org/1999/xhtml"
-      layout:decorate="~{layout}" lang="en">
+      layout:decorate="~{layout1}" lang="en">
 
 <!-- <head> -->
 <div layout:fragment="head" th:remove="tag">
     <!-- Page specific head additions -->
     <title>Person List</title>
 </div>
-
+<head>
 <!-- <body> -->
-<div layout:fragment="body" th:remove="tag">
+<div layout:fragment="content" th:remove="tag">
     <!-- Page specific body additions -->
     <div class="container">
 
@@ -26,17 +26,15 @@
         <table class="table table-bordered">
             <thead>
             <tr>
-                <th>ID</th>
-                <th>EMail</th>
+                <th>Game Number</th>
                 <th>Person</th>
-                <th>Age</th>
+                <th>Rating</th>
                 <th>Action</th>
             </tr>
             </thead>
             <tbody>
             <tr th:each="person : ${list}">
-                <td th:text="${person.id}">Person ID</td>
-                <td th:text="${person.email}">Birth Date</td>
+                <td th:text="${person.id}">Game Number</td>
                 <td th:text="${person.name}">Name</td>
                 <td th:if="${person.getAge() != -1}" th:text="${person.getAge()}">Age</td>
                 <td th:unless="${person.getAge() != -1}" th:text="Unknown">Unknown Age</td>
@@ -51,5 +49,5 @@
     </div>
 
 </div>
-
+</head>
 </html>

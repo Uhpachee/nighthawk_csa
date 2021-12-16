@@ -1,3 +1,4 @@
+
 package com.nighthawk.csa.data;
 
 import com.nighthawk.csa.data.SQL.*;
@@ -77,76 +78,5 @@ public class PersonSqlMvcController implements WebMvcConfigurer {
         return "redirect:/data/person";
     }
 
-    /*
-    #### RESTful API section ####
-    Resource: https://spring.io/guides/gs/rest-service/
-    */
-
-    /*
-    GET List of People
-     */
-    @RequestMapping(value = "/api/people/get")
-    public ResponseEntity<List<Person>> getPeople() {
-        return new ResponseEntity<>( repository.listAll(), HttpStatus.OK);
-    }
-
-    /*
-    GET individual Person using ID
-     */
-    @RequestMapping(value = "/api/person/get/{id}")
-    public ResponseEntity<Person> getPerson(@PathVariable long id) {
-        return new ResponseEntity<>( repository.get(id), HttpStatus.OK);
-    }
-
-    /*
-    DELETE individual Person using ID
-     */
-    @RequestMapping(value = "/api/person/delete/{id}", method = RequestMethod.DELETE)
-    public ResponseEntity<Object> deletePerson(@PathVariable long id) {
-        repository.delete(id);
-        return new ResponseEntity<>( ""+ id +" deleted", HttpStatus.OK);
-    }
-
-
-    /*
-    POST Aa record by Requesting Parameters from URI
-     */
-    @RequestMapping(value = "/api/person/post", method = RequestMethod.POST)
-    public ResponseEntity<Object> postPerson(@RequestParam("email") String email,
-                                             @RequestParam("name") String name,
-                                             @RequestParam("dob") String dobString) {
-        Date dob;
-        try {
-            dob = new SimpleDateFormat("MM-dd-yyyy").parse(dobString);
-        } catch (Exception e) {
-            return new ResponseEntity<>(dobString +" error; try MM-dd-yyyy", HttpStatus.BAD_REQUEST);
-        }
-        // A person object WITHOUT ID will create a new record
-        Person person = new Person(email, name, dob);
-        repository.save(person);
-        return new ResponseEntity<>(email +" is created successfully", HttpStatus.CREATED);
-    }
-
-    @GetMapping("/data/person_search")
-    public String person() {
-        return "data/person_search";
-    }
-
-    /*
-    The personSearch API looks across database for partial match to term (k,v) passed by RequestEntity body
-     */
-    @RequestMapping(value = "/api/person_search", method = RequestMethod.POST, produces = MediaType.APPLICATION_JSON_VALUE)
-    public ResponseEntity<Object> personSearch(RequestEntity<Object> request) {
-
-        // extract term from RequestEntity
-        JSONObject json = new JSONObject((Map) Objects.requireNonNull(request.getBody()));
-        String term = (String) json.get("term");
-
-        // custom JPA query to filter on term
-        List<Person> list = repository.listLikeNative(term);
-
-        // return resulting list and status, error checking should be added
-        return new ResponseEntity<>(list, HttpStatus.OK);
-    }
 
 }
