@@ -8,6 +8,8 @@ Group members: [Justin](https://github.com/jli615), [Rohan](https://github.com/R
 
 ## Week 3
 
+Review Ticket w/ Tangibles: https://github.com/shekark642/M222-Slackbotss/issues/17
+
 People | Role | Progress |
 -------------  | -------------- | -------------- |
 Abhijay  | Scrum Master | Assigned more issues and got everyone to work. Worked on individual and overall about page and got the frontend done for that. |
