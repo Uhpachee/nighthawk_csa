@@ -6,6 +6,8 @@ The games will be pulled in from an API, as well as personally customed by us.
 
 Group members: [Justin](https://github.com/jli615), [Rohan](https://github.com/RohanKoshy), [Shekar](https://github.com/shekark642), [Abhijay](https://github.com/Dubshott), [Kian](https://github.com/Uhpachee)
 
+Group members' replit profiles: [Justin](https://replit.com/@JustinLi38)
+
 ## Week 3
 
 Review Ticket w/ Tangibles: https://github.com/shekark642/M222-Slackbotss/issues/17
