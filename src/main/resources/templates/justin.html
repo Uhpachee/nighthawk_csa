@@ -7,28 +7,29 @@
     <title>Justin's About Me Page!</title></div>
 </head>
 
-<body style="background-color:cornflowerblue"><div layout:fragment="content" th:remove="tag">
-    <a  style="font-size:xxx-large">Justin</a><br>
-    <img src="/src/main/staticin/static/images/don't panic chicken.jpg" th:src="@{/images/don't panic chicken.jpg}" width="100" height="auto" id="getImage"><br>
-    <input type="button" onclick="imagefun()" value="Change Image"><br>
-    <a href="/justin/light">Light Sequence Minilab</a>
-    <a href="https://docs.google.com/document/d/1K9bE17_RsneMIv-P-jf_3fWYD74xZ2KxzF0jPK18vAY/edit?usp=sharing">Journal</a>
-    <a href="https://github.com/https://github.com/jli615">Github</a>
-    <a href="https://github.com/shekark642/M222-Slackbotss/commits?author=jli615">Commits</a>
-    <a href="https://github.com/shekark642/M222-Slackbotss/projects/1">Scrumboard</a>
-    <a href="https://github.com/shekark642/M222-Slackbotss/projects/1?card_filter_query=assignee%3Ajli615">Issues</a>
-    <br><button onclick="getLocation()">Click to get your location using an API</button><br>
-    <input type="text" placeholder="name"><input type="text" placeholder="Are you an athlete?"><input type="text" placeholder="Are you not?"><br>
-    <button type="button" class="btn btn-primary" onclick="productsAdd(); clickCounter();">Submit</button>
+<body style="background-image: url(https://redacaoemcampo.com/wp-content/uploads/2022/01/DeMar-DeRozan-in-the-clutch-Every-game-winner-of-the-Bulls-1024x576.jpeg)"><div layout:fragment="content" th:remove="tag">
+    <center><a  style="font-size:xxx-large">Justin</a><br></center>
+    <center><img src="/src/main/staticin/static/images/don't panic chicken.jpg" th:src="@{/images/don't panic chicken.jpg}" width="100" height="auto" id="getImage"><br></center>
+    <center><input type="button" onclick="imagefun()" value="Change Image"><br></center>
+    <center><button><a href="/justin/light">Light Sequence Minilab</a></button>
+        <button><a href="https://docs.google.com/document/d/1K9bE17_RsneMIv-P-jf_3fWYD74xZ2KxzF0jPK18vAY/edit?usp=sharing">Journal</a></button>
+    <button><a href="https://github.com/https://github.com/jli615">Github</a></button></center>
+    <center><button><a href="https://github.com/shekark642/M222-Slackbotss/commits?author=jli615">Commits</a></button>
+        <button><a href="https://github.com/shekark642/M222-Slackbotss/projects/1">Scrumboard</a></button>
+            <button><a href="https://github.com/shekark642/M222-Slackbotss/projects/1?card_filter_query=assignee%3Ajli615">Issues</a></button>
+        <button><a href="https://replit.com/@JustinLi38">RepLit Labs</a></button></center>
+    <center><br><button onclick="getLocation()">Click to get your location using an API</button><br></center>
+    <center><input type="text" placeholder="name"><input type="text" placeholder="Are you an athlete?"><input type="text" placeholder="Are you not?"><br></center>
+    <center><button type="button" class="btn btn-primary" onclick="productsAdd(); clickCounter();">Submit</button>
     <button type="button" class="btn btn-primary" onclick="reloadData();">Reload Data</button>
-    <button type="button" class="btn btn-primary" onclick="localStorage.clear();">Clear Storage</button>
-    <table id="productTable">
+    <button type="button" class="btn btn-primary" onclick="localStorage.clear();">Clear Storage</button></center>
+    <center><table id="productTable">
         <tr>
             <td>Name</td>
             <td>Are you an athlete?</td>
             <td>Are you not?</td>
         </tr>
-    </table>
+    </table></center>
     <p id="demo"></p>
     <script>
         const myElement = document.getElementById("demo");
@@ -49,7 +50,7 @@
         function imagefun() {
             var Image_Id = document.getElementById('getImage');
             if (Image_Id.src.match("/images/don't panic chicken.jpg")) {
-                Image_Id.src = "/images/burnt.jpeg";
+                Image_Id.src = "/images/logo.png";
             }
             else {
                 Image_Id.src = "/images/don't panic chicken.jpg";
