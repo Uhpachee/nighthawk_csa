@@ -69,6 +69,14 @@ a:hover{
   display: flex;
   position: relative;
   width: auto;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.row2 {
+  display: flex;
+  position: relative;
+  width: auto;
 }
 
 .column {
@@ -80,24 +88,8 @@ a:hover{
   width: auto;
   color: black;
   height: auto;
-
-  background-color: rgba(103, 255, 144, 0.2);
-  border-radius: 1px;
-  margin-top: 100px;
-  backdrop-filter: blur(7px);
-  -webkit-backdrop-filter: blur(7px);
-}
-
-.column2 {
-  flex: 15%;
-  top:
-
-  padding: 10px;
-  padding-top: 10px;
-  margin: 5px;
-  width: auto;
-  color: black;
-  height: auto;
+  align-self: center;
+  -webkit-align-self: center;
 
   background-color: rgba(103, 255, 144, 0.2);
   border-radius: 1px;
