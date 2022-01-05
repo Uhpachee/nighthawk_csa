@@ -456,6 +456,7 @@ table, th, td {
   background: #FFFFFF;
   border-radius: 20px;
   transform-style: preserve-3d;
+  box-shadow: 4px 4px;
 }
 
 .container .box::before {
