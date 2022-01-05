@@ -434,3 +434,147 @@ table, th, td {
   position:absolute;
   top:15%;
 }
+
+.container {
+  position: relative;
+  display: flex;
+  justify-center: center;
+  align-items: center;
+  flex-wrap: wrap;
+  transform-style: preserve-3d;
+  width: 33%;
+}
+
+.container .box {
+  position: relative;
+  width: 300px;
+  height: 400px;
+  margin: 40px;
+  background: #FFFFFF;
+  background: #FFFFFF;
+  border-radius: 20px;
+  transform-style: preserve-3d;
+}
+
+.container .box::before {
+  content: 'BIG';
+  position: absolute;
+  top: 10px;
+  left: 0px;
+  font-size: 6em;
+  font-weight: 900;
+  color: #9b9b9b;
+  opacity: 0;
+  font-style: italic;
+  transition: 0.5s;
+}
+
+.container .box::after {
+  content: 'DUB';
+  position: absolute;
+  bottom: 20px;
+  right: 0px;
+  font-size: 6em;
+  font-weight: 900;
+  color: #9b9b9b;
+  opacity: 0;
+  font-style: italic;
+  transition: 0.5s;
+}
+
+.container .box:hover::before,
+.container .box:hover::after {
+  opacity: 0.1;
+}
+
+.container .box .aboutName {
+  position: absolute;
+  top:0px;
+  left: 60px;
+  font-family: Open Sans;
+  text-align: left;
+  font-size: 1.5em;
+  color: #9b9b9b;
+  transform-style: preserve-3d;
+  transform: translate3d(0,0,75px);
+  transition: 0.5s;
+  opacity: 0;
+  z-index: 11;
+}
+
+.container .box:hover .aboutName {
+  top: 300px;
+  opacity: 1;
+}
+
+.container .box .aboutNick {
+  position: absolute;
+  bottom: 0;
+  right: 10px;
+  padding-top:10px;
+  transform-style: preserve-3d;
+  transform: translate3d(-50%,0,75px);
+  color: #9b9b9b;
+  text-decoration: none;
+  transition: 0.5s;
+  opacity: 0;
+  z-index: 10;
+}
+.container .box:hover .aboutNick {
+  bottom: 30px;
+  opacity: 1;
+}
+
+.container .box .aboutSocial1 {
+  position: absolute;
+  font-size:2.5em;
+  top: 130px;
+  left: 0;
+  padding-top:10px;
+  transform-style: preserve-3d;
+  transform: translate3d(-50%,0,75px);
+  text-decoration: none;
+  transition: 0.5s;
+  opacity: 0;
+  z-index: 12;
+}
+.container .box:hover .aboutSocial1 {
+  left: 20px;
+  opacity: 1;
+}
+
+.container .box .aboutSocial2 {
+  position: absolute;
+  font-size:2.5em;
+  top: 180px;
+  left: 0;
+  padding-top:10px;
+  transform-style: preserve-3d;
+  transform: translate3d(-50%,0,75px);
+  text-decoration: none;
+  transition: 0.5s;
+  opacity: 0;
+  z-index: 13;
+}
+.container .box:hover .aboutSocial2 {
+  left:20px;
+  opacity: 1;
+}
+
+.container .box .aboutImage {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  max-width: 250px;
+  transition: 0.5s;
+  z-index: 9;
+  transition: 0.5s;
+  transform-style: preserve-3d;
+  transform: translate3d(-50%,-50%,75px);
+  border-radius: 50%;
+
+}
+
+.container .box:hover .aboutImage {
+  transform: translate3d(-50%, -50%, 100px);
+}
