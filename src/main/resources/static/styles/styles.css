@@ -454,7 +454,6 @@ table, th, td {
   height: 400px;
   margin: 40px;
   background: #FFFFFF;
-  background: #FFFFFF;
   border-radius: 20px;
   transform-style: preserve-3d;
 }
@@ -463,7 +462,7 @@ table, th, td {
   content: 'BIG';
   position: absolute;
   top: 10px;
-  left: 0px;
+  left: 5px;
   font-size: 6em;
   font-weight: 900;
   color: #9b9b9b;
@@ -476,7 +475,7 @@ table, th, td {
   content: 'DUB';
   position: absolute;
   bottom: 20px;
-  right: 0px;
+  right: 5px;
   font-size: 6em;
   font-weight: 900;
   color: #9b9b9b;
@@ -493,7 +492,7 @@ table, th, td {
 .container .box .aboutName {
   position: absolute;
   top:0px;
-  left: 60px;
+  left: 100px;
   font-family: Open Sans;
   text-align: left;
   font-size: 1.5em;
@@ -530,7 +529,7 @@ table, th, td {
 
 .container .box .aboutSocial1 {
   position: absolute;
-  font-size:2.5em;
+  font-size:0.75em;
   top: 130px;
   left: 0;
   padding-top:10px;
@@ -542,13 +541,13 @@ table, th, td {
   z-index: 12;
 }
 .container .box:hover .aboutSocial1 {
-  left: 20px;
+  left: 40px;
   opacity: 1;
 }
 
 .container .box .aboutSocial2 {
   position: absolute;
-  font-size:2.5em;
+  font-size:0.75em;
   top: 180px;
   left: 0;
   padding-top:10px;
@@ -560,7 +559,7 @@ table, th, td {
   z-index: 13;
 }
 .container .box:hover .aboutSocial2 {
-  left:20px;
+  left:40px;
   opacity: 1;
 }
 
