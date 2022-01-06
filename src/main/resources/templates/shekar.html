@@ -35,7 +35,7 @@
 <h1 style="color: green; text-color: green; font-size:30px">I am a collaborator on this project as well</h1>
 <div>
 <img src="/src/main/staticin/static/images/ncs_logo.jpg" th:src="@{/images/ncs_logo.jpg}" width="100" height="auto" id="getImage"><br>
-<input type="button" onclick="switchpicture()" value="Change Image"><br>
+<input type="button" onclick="switchpicture()" value="Change to another picture of me"><br>
 </div>
 <center>
     <div class="container-fluid">
@@ -63,7 +63,7 @@
     function switchpicture() {
         var Image_Id = document.getElementById('getImage');
         if (Image_Id.src.match("/images/ncs_logo.jpg")) {
-            Image_Id.src = "/images/logo.png";
+            Image_Id.src = "/images/idek.jpg";
         }
         else {
             Image_Id.src = "/images/ncs_logo.jpg";
