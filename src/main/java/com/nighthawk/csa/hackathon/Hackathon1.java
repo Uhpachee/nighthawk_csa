@@ -3,7 +3,6 @@ import java.util.Scanner;
 
 
 public class Hackathon1 {
-
     public static void longestStreak(String str) {
         int longestCount = 0;
         char longestChar = 'a';
