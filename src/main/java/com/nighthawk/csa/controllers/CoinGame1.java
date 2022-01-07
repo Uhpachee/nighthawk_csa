@@ -65,7 +65,7 @@ public class CoinGame1
 
     public void playGame()
     {
-        int round =0;
+        int round =maxRounds;
         System.out.println("This is round "+round);
         int Player1total=startingCoins;
         int Player2total=startingCoins;
@@ -78,8 +78,6 @@ public class CoinGame1
             System.out.println("Player 2 spent "+Player2Play);
             Player1total=Player1total-Player1Play;
             Player2total=Player2total-Player2Play;
-            System.out.println("Player 1 has "+Player1total+" coins left");
-            System.out.println("Player 2 has "+Player2total+" coins left");
             if(Player2Play == Player1Play)
             {
                 Player2total++;
