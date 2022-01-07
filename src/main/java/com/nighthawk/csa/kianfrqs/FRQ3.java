@@ -11,23 +11,18 @@ public class FRQ3 {
 
 
         if (rsvp == true) {
-            System.out.println("attending");
             finalString = "Thank you for attending! You will be served ";
             if (selection == 3) {
-                System.out.println("pasta");
                 finalString = finalString.concat("pasta.");
             }
             else if (selection == 2) {
-                System.out.println("chicken");
                 finalString = finalString.concat("chicken.");
             }
             else {
-                System.out.println("beef");
                 finalString = finalString.concat("beef.");
             }
         }
         else {
-            System.out.println("not attending");
             finalString = "Sorry you can't make it";
         }
         return finalString;
@@ -35,6 +30,8 @@ public class FRQ3 {
     public void run(boolean rsvp1, int selection1, boolean rsvp2, int selection2) {
         option1 = FRQ3(rsvp1, selection1);
         option2 = FRQ3(rsvp2,selection2);
+        System.out.println("Person 1: " + option1);
+        System.out.println("Person 2: " + option2);
 
         if (option1 == option2) {
             System.out.println("true");
