@@ -1,0 +1,205 @@
+
+.container2 .box {
+    position: relative;
+    width: 300px;
+    height: 400px;
+    margin: 40px;
+    background: #FFFFFF;
+    border-radius: 20px;
+    transform-style: preserve-3d;
+    box-shadow: 4px 4px;
+}
+
+.container2 .box::before {
+    position: absolute;
+    top: 10px;
+    left: 5px;
+    font-size: 6em;
+    font-weight: 900;
+    color: #9b9b9b;
+    opacity: 0;
+    font-style: italic;
+    transition: 0.5s;
+}
+
+.container2 .box::after {
+    position: absolute;
+    bottom: 20px;
+    right: 5px;
+    font-size: 6em;
+    font-weight: 900;
+    color: #9b9b9b;
+    opacity: 0;
+    font-style: italic;
+    transition: 0.5s;
+}
+
+.container2 .box:hover::before,
+.container2 .box:hover::after {
+    opacity: 0.1;
+}
+
+.container2 .box .aboutName {
+    position: absolute;
+    top:0px;
+    left: 100px;
+    font-family: Open Sans;
+    text-align: left;
+    font-size: 1.5em;
+    color: #9b9b9b;
+    transform-style: preserve-3d;
+    transform: translate3d(0,0,75px);
+    transition: 0.5s;
+    opacity: 0;
+    z-index: 11;
+}
+
+.container2 .box:hover .aboutName {
+    top: 300px;
+    opacity: 1;
+}
+
+.container2 .box .aboutNick {
+    position: absolute;
+    bottom: 0;
+    right: 10px;
+    padding-top:10px;
+    transform-style: preserve-3d;
+    transform: translate3d(-50%,0,75px);
+    color: #9b9b9b;
+    text-decoration: none;
+    transition: 0.5s;
+    opacity: 0;
+    z-index: 10;
+}
+.container2 .box:hover .aboutNick {
+    bottom: 30px;
+    opacity: 1;
+}
+
+.container2 .box .aboutSocial1 {
+    position: absolute;
+    font-size:0.75em;
+    top: 10px;
+    left: 0;
+    padding-top:10px;
+    transform-style: preserve-3d;
+    transform: translate3d(-50%,0,75px);
+    text-decoration: none;
+    transition: 0.5s;
+    opacity: 0;
+    z-index: 12;
+}
+.container2 .box:hover .aboutSocial1 {
+    left: 55px;
+    opacity: 1;
+}
+
+.container2 .box .aboutSocial2 {
+    position: absolute;
+    font-size:0.75em;
+    top: 60px;
+    left: 0;
+    padding-top:10px;
+    transform-style: preserve-3d;
+    transform: translate3d(-50%,0,75px);
+    text-decoration: none;
+    transition: 0.5s;
+    opacity: 0;
+    z-index: 13;
+}
+.container2 .box:hover .aboutSocial2 {
+    left:55px;
+    opacity: 1;
+}
+
+.container2 .box .aboutSocial3 {
+    position: absolute;
+    font-size:0.75em;
+    top: 110px;
+    left: 0;
+    padding-top:10px;
+    transform-style: preserve-3d;
+    transform: translate3d(-50%,0,75px);
+    text-decoration: none;
+    transition: 0.5s;
+    opacity: 0;
+    z-index: 13;
+}
+.container2 .box:hover .aboutSocial3 {
+    left:55px;
+    opacity: 1;
+}
+
+.container2 .box .aboutSocial4 {
+    position: absolute;
+    font-size:0.75em;
+    top: 160px;
+    left: 0;
+    padding-top:10px;
+    transform-style: preserve-3d;
+    transform: translate3d(-50%,0,75px);
+    text-decoration: none;
+    transition: 0.5s;
+    opacity: 0;
+    z-index: 13;
+}
+.container2 .box:hover .aboutSocial4 {
+    left:55px;
+    opacity: 1;
+}
+
+
+.container2 .box .aboutSocial5 {
+    position: absolute;
+    font-size:0.75em;
+    top: 210px;
+    left: 0;
+    padding-top:10px;
+    transform-style: preserve-3d;
+    transform: translate3d(-50%,0,75px);
+    text-decoration: none;
+    transition: 0.5s;
+    opacity: 0;
+    z-index: 13;
+}
+.container2 .box:hover .aboutSocial5 {
+    left:55px;
+    opacity: 1;
+}
+
+.container2 .box .aboutSocial6 {
+    position: absolute;
+    font-size:0.75em;
+    top: 260px;
+    left: 0;
+    padding-top:10px;
+    transform-style: preserve-3d;
+    transform: translate3d(-50%,0,75px);
+    text-decoration: none;
+    transition: 0.5s;
+    opacity: 0;
+    z-index: 13;
+}
+.container2 .box:hover .aboutSocial6 {
+    left:55px;
+    opacity: 1;
+}
+
+.container2 .box .aboutImage {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    max-width: 250px;
+    transition: 0.5s;
+    z-index: 9;
+    transition: 0.5s;
+    transform-style: preserve-3d;
+    transform: translate3d(-50%,-50%,75px);
+    border-radius: 50%;
+
+}
+
+.container2 .box:hover .aboutImage {
+    transform: translate3d(-50%, -50%, 100px);
+}

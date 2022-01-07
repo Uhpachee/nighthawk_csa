@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html xmlns:layout="http://www.w3.org/1999/xhtml" xmlns:th="http://www.w3.org/1999/xhtml"
       layout:decorate="~{layout1}" lang="en">
-<head><div layout:fragment="metadata" th:remove="tag">
-
+<head>
+    <div layout:fragment="metadata" th:remove="tag">
+    <link th:href="@{/styles/abhijay.css}" rel="stylesheet" />
     <meta charset="UTF-8">
     <title>Abhijay's About Me Page!</title></div>
 
@@ -12,23 +13,59 @@
     </style>
 </head>
 
-<body style="background-image: url(https://wallpaperaccess.com/full/395738.jpg);"><div layout:fragment="content" th:remove="tag">
+<body style="background-image: url(https://static.vecteezy.com/system/resources/previews/001/827/556/original/abstract-bokeh-effect-with-soft-light-background-vector.jpg);"><div layout:fragment="content" th:remove="tag">
 
-    <div class="abhiabout">
-        <a style="font-size:xxx-large;">Abhijay</a><br>
+    <div class="row justify-content-around container2" style="text-align:center;">
+        <!--
+        <a style="font-size:xxx-large;font-family:sans-serif;">Abhijay</a><br>
         <img src="/src/main/staticin/static/images/abhijay.jpg" th:src="@{/images/abhijay.jpg}" width="100" height="auto" id="getImage"><br>
         <input type="button" onclick="imagefun()" value="Change Image"><br>
-        <a href="/abhijay/light">Light Sequence Minilab<br></a>
-        <a href="https://docs.google.com/document/d/1K9bE17_RsneMIv-P-jf_3fWYD74xZ2KxzF0jPK18vAY/edit?usp=sharing">Journal<br></a>
-        <a href="https://github.com/Dubshott">Github<br></a>
-        <a href="https://github.com/shekark642/M222-Slackbotss/commits?author=Dubshott">Commits<br></a>
-        <a href="https://github.com/shekark642/M222-Slackbotss/projects/1">Scrumboard<br></a>
-        <a href="https://github.com/shekark642/M222-Slackbotss/projects/1?card_filter_query=assignee%3Adubshott">Issues<br></a>
+        -->
+
+        <div class="box column2" data-tilt>
+            <div class="circle"></div>
+            <img class="aboutImage" src="images/abhijay.jpg" th:src="@{/images/abhijay.jpg}" width="200px" height="200px" id="getImage">
+            <input style="position:absolute;top:315px;right:90px;" type="button" onclick="imagefun()" value="Change Image"><br>
+        </div>
+        <!-- Links -->
+
+        <div class="box column2" data-tilt>
+            <!-- Light Lab -->
+            <p class="aboutSocial1"><a target="_blank" href="/abhijay/light" style=""><i style="color:cadetblue;" class="fa fa-cloud"></i></a></p>
+            <p style="position:center;font-size:large;text-align:center;padding-top:20px;">Light Minilab</p>
+
+            <!-- Journal -->
+            <p class="aboutSocial2"><a target="_blank" href="https://docs.google.com/document/d/1K9bE17_RsneMIv-P-jf_3fWYD74xZ2KxzF0jPK18vAY/edit?usp=sharing"><i style="color:gray" class="fa fa-google"></i></a></p>
+            <p style="position:center;font-size:large;text-align:center;padding-top:6px;">Journal</p>
+
+            <!--Github -->
+            <p class="aboutSocial3"><a target="_blank" href="https://github.com/Dubshott"><i style="color:cadetblue" class="fa fa-github"></i></a></p>
+            <p style="position:center;font-size:large;text-align:center;padding-top:6px;">Github</p>
+
+            <!-- Commits -->
+            <p class="aboutSocial4"><a target="_blank" href="https://github.com/shekark642/M222-Slackbotss/commits?author=Dubshott"><i style="color:gray" class="fa fa-github"></i></a></p>
+            <p style="position:center;font-size:large;text-align:center;padding-top:6px;">Commits</p>
+
+            <!-- Scrumboard -->
+            <p class="aboutSocial5"><a target="_blank" href="https://github.com/shekark642/M222-Slackbotss/projects/1"><i style="color:cadetblue" class="fa fa-github"></i></a></p>
+            <p style="position:center;font-size:large;text-align:center;padding-top:6px;">Scrumboard</p>
+
+            <!-- Issues -->
+            <p class="aboutSocial6"><a target="_blank" href="https://github.com/shekark642/M222-Slackbotss/projects/1?card_filter_query=assignee%3Adubshott"><i style="color:gray" class="fa fa-github"></i></a></p>
+            <p style="position:center;font-size:large;text-align:center;padding-top:6px;">Issues</p>
+        </div>
+
+        <div class="box column2" data-tilt>
         <br><button onclick="getLocation()">Click to get your location using an API</button><br>
-        <input type="text" placeholder="name"><input type="text" placeholder="Are you my friend?"><input type="text" placeholder="Do you want to be?"><br>
-        <button type="button" class="btn btn-primary" onclick="productsAdd(); clickCounter();">Submit</button>
-        <button type="button" class="btn btn-primary" onclick="reloadData();">Reload Data</button>
-        <button type="button" class="btn btn-primary" onclick="localStorage.clear();">Clear Storage</button>
+        </div>
+
+        <div class="box column2" data-tilt>
+            <input type="text" placeholder="name"><input type="text" placeholder="Are you my friend?"><input type="text" placeholder="Do you want to be?"><br>
+            <button type="button" class="btn btn-primary" onclick="productsAdd(); clickCounter();">Submit</button>
+            <button type="button" class="btn btn-primary" onclick="reloadData();">Reload Data</button>
+            <button type="button" class="btn btn-primary" onclick="localStorage.clear();">Clear Storage</button>
+        </div>
+
         <table id="productTable">
             <tr>
                 <td>Name</td>
