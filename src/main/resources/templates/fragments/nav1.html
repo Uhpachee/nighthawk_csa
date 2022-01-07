@@ -21,17 +21,13 @@
             <li style="cursor: default">|</li>
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle navtext" href="#" id="navbarNews" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    News
+                    Utilities
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" href="/NewsSource">Games</a>
-                    <a class="dropdown-item" href="/news">Games</a>
+                    <a class="dropdown-item" href="/games">Games</a>
+                    <a class="dropdown-item" href="/spotify">Music</a>
                     <a class="dropdown-item" href="/key">Games</a>
                 </div>
-            </li>
-            <li style="cursor: default">|</li>
-            <li class="nav-item active">
-                <a class="nav-link navtext" href="/games">Games<span class="sr-only">(current)</span></a>
             </li>
             <li style="cursor: default">|</li>
             <li class="nav-item dropdown">
@@ -123,19 +119,6 @@
                     : localStorage.removeItem("darkSwitch");
             }
             // End Dark Mode Control
-
-
-            // Clock Control
-            // clockElement global element set for convenience
-            let clockElement = document.getElementById('clock');
-            // Clock update executes on each interval set by timer
-            function clock() {
-                let date = new Date();
-                clockElement.textContent = date.toLocaleString();
-            }
-            // Clock refresh timer, a reoccurring event
-            setInterval(clock, 1000);
-            // End Clock Control
         </script>
 
     </div>

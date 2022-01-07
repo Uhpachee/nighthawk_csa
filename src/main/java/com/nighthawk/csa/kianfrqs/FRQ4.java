@@ -1,8 +1,6 @@
-package com.nighthawk.csa.frqs;
-import com.nighthawk.csa.hackathon.Hackathon1;
+package com.nighthawk.csa.kianfrqs;
 
 import java.util.Random;
-import java.util.Scanner;
 
 public class FRQ4 {
     private int startingCoins; // starting number of coins
