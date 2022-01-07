@@ -48,33 +48,33 @@ public class FRQ4 {
          Both players will start with same number of coins
          Code section to determine winner
          **/
-        int p1coins = startingGems; // don’t use s because it’s attribute
-        int p2coins = startingGems;
+        int p1gems = startingGems; // don’t use s because it’s attribute
+        int p2gems = startingGems;
         int round = 1;
         int p1spend; // determining how much player 1 spends
         int p2spend; // determining how much player 2 spends
         /** conditions for the game to be played continually
          **/
-        while (round <= maxRounds && p1coins >= 3 && p2coins >= 3) {
+        while (round <= maxRounds && p1gems >= 3 && p2gems >= 3) {
             p1spend = getPlayer1Move(); // no parameter for this one
             p2spend = getPlayer2Move(round); // round number included
-            p1coins -= p1spend; // coins spent in round
-            p2coins -= p2spend; // coins spent in round
-            System.out.println("Player 1 has:" + p1coins);
-            System.out.println("Player 2 has:" + p2coins);
+            p1gems -= p1spend; // coins spent in round
+            p2gems -= p2spend; // coins spent in round
+            System.out.println("Player 1 has:" + p1gems);
+            System.out.println("Player 2 has:" + p2gems);
             if (p2spend == p1spend)
-                p2coins++;
+                p2gems++;
             else if (Math.abs(p2spend - p1spend) == 1) // difference is 1
-                p2coins++;
+                p2gems++;
             else
-                p1coins += 2;
+                p1gems += 2;
             round++; // increment round
             System.out.println("This is round" + round);
         }
         /** determining the winner*/
-        if (p1coins == p2coins)
+        if (p1gems == p2gems)
             System.out.println("Tied");
-        else if (p1coins > p2coins)
+        else if (p1gems > p2gems)
             System.out.println("Player 1 Wins");
         else
             System.out.println("Player 2 Wins");
