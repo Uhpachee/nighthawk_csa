@@ -16,7 +16,7 @@
 
     <div class="abhiabout">
         <a style="font-size:xxx-large;">Abhijay</a><br>
-        <img src="/src/main/staticin/static/images/bulb_off.jpg" th:src="@{/images/bulb_off.jpg}" width="100" height="auto" id="getImage"><br>
+        <img src="/src/main/staticin/static/images/abhijay.jpg" th:src="@{/images/abhijay.jpg}" width="100" height="auto" id="getImage"><br>
         <input type="button" onclick="imagefun()" value="Change Image"><br>
         <a href="/abhijay/light">Light Sequence Minilab<br></a>
         <a href="https://docs.google.com/document/d/1K9bE17_RsneMIv-P-jf_3fWYD74xZ2KxzF0jPK18vAY/edit?usp=sharing">Journal<br></a>
@@ -55,11 +55,11 @@
 
             function imagefun() {
                 var Image_Id = document.getElementById('getImage');
-                if (Image_Id.src.match("/images/bulb_off.jpg")) {
+                if (Image_Id.src.match("/images/abhijay.jpg")) {
                     Image_Id.src = "/images/logo.png";
                 }
                 else {
-                    Image_Id.src = "/images/bulb_off.jpg";
+                    Image_Id.src = "/images/abhijay.jpg";
                 }
 
             }
