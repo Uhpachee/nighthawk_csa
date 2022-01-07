@@ -11,19 +11,19 @@ public class FRQ3 {
 
 
         if (rsvp == true) {
-            finalString = "Thank you for attending! You will be served ";
+            finalString = "Thank you for coming! Your drink will come by shortly!";
             if (selection == 3) {
-                finalString = finalString.concat("pasta.");
+                finalString = finalString.concat("water.");
             }
             else if (selection == 2) {
-                finalString = finalString.concat("chicken.");
+                finalString = finalString.concat("coke.");
             }
             else {
-                finalString = finalString.concat("beef.");
+                finalString = finalString.concat("fanta.");
             }
         }
         else {
-            finalString = "Sorry you can't make it";
+            finalString = "RIP. You can't come.";
         }
         return finalString;
     }

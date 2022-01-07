@@ -9,7 +9,7 @@
 
 <body style="background-image: url(https://redacaoemcampo.com/wp-content/uploads/2022/01/DeMar-DeRozan-in-the-clutch-Every-game-winner-of-the-Bulls-1024x576.jpeg)"><div layout:fragment="content" th:remove="tag">
     <center><a  style="font-size:xxx-large">Justin</a><br></center>
-    <center><img src="/src/main/staticin/static/images/don't panic chicken.jpg" th:src="@{/images/don't panic chicken.jpg}" width="100" height="auto" id="getImage"><br></center>
+    <center><img src="/src/main/staticin/static/images/justin.jpg" th:src="@{/images/justin.jpg}" width="100" height="auto" id="getImage"><br></center>
     <center><input type="button" onclick="imagefun()" value="Change Image"><br></center>
     <center><button><a href="/justin/light">Light Sequence Minilab</a></button>
         <button><a href="https://docs.google.com/document/d/1K9bE17_RsneMIv-P-jf_3fWYD74xZ2KxzF0jPK18vAY/edit?usp=sharing">Journal</a></button>
@@ -49,11 +49,11 @@
 
         function imagefun() {
             var Image_Id = document.getElementById('getImage');
-            if (Image_Id.src.match("/images/don't panic chicken.jpg")) {
+            if (Image_Id.src.match("/images/justin.jpg")) {
                 Image_Id.src = "/images/logo.png";
             }
             else {
-                Image_Id.src = "/images/don't panic chicken.jpg";
+                Image_Id.src = "/images/justin.jpg";
             }
 
         }

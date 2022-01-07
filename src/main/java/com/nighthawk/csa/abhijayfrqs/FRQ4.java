@@ -3,12 +3,12 @@ package com.nighthawk.csa.abhijayfrqs;
 import java.util.Random;
 
 public class FRQ4 {
-    private int startingCoins; // starting number of coins
+    private int startingGems; // starting number of coins
     private int maxRounds; // maximum number of rounds played
 
     public FRQ4(int s, int r)
     {
-        startingCoins = s;
+        startingGems = s;
         maxRounds = r;
     }
 
@@ -48,8 +48,8 @@ public class FRQ4 {
          Both players will start with same number of coins
          Code section to determine winner
          **/
-        int p1coins = startingCoins; // don’t use s because it’s attribute
-        int p2coins = startingCoins;
+        int p1coins = startingGems; // don’t use s because it’s attribute
+        int p2coins = startingGems;
         int round = 1;
         int p1spend; // determining how much player 1 spends
         int p2spend; // determining how much player 2 spends
