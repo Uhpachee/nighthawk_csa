@@ -11,7 +11,7 @@ public class FRQ3 {
 
 
         if (rsvp == true) {
-            finalString = "Thank you for coming! Your drink will come by shortly!";
+            finalString = "Thank you for coming! Your drink will be ";
             if (selection == 3) {
                 finalString = finalString.concat("water.");
             }
