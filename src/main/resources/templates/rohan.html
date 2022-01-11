@@ -13,7 +13,7 @@
     <center><h3 style="font-family:verdana"> I am a senior at Del Norte and currently taking AP Computer Science A. My hobbies include playing soccer and driving. I am a huge Barcelona fan and watch them religiously.
     </h3></center>
     <center><div>
-        <img src="/src/main/staticin/static/images/chickenbg.jpg" th:src="@{/images/chickenbg.jpg}" width="100" height="auto" id="getImage"><br>
+        <img src="/src/main/staticin/static/images/rohan.jpg" th:src="@{/images/rohan.jpg}" width="100" height="auto" id="getImage"><br>
         <input type="button" onclick="image()" value="Change Image"><br>
 </div></center>
     <div>
@@ -31,11 +31,11 @@
 <script>
     function image() {
         var Image_Id = document.getElementById('getImage');
-        if (Image_Id.src.match("/images/chickenbg.jpg")) {
+        if (Image_Id.src.match("/images/rohan.jpg")) {
             Image_Id.src = "/images/logo.png";
         }
         else {
-            Image_Id.src = "/images/chickenbg.jpg";
+            Image_Id.src = "/images/rohan.jpg";
         }
     }
 </script>
