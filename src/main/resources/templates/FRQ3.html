@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html xmlns:layout="http://www.w3.org/1999/xhtml" xmlns:th="http://www.w3.org/1999/xhtml"
+      layout:decorate="~{layout1}" lang="en">
+<head><div layout:fragment="metadata" th:remove="tag">
+    <meta charset="UTF-8">
+  <title>Kian's FRQ3</title></div>
+</head>
+<body><div layout:fragment="content" th:remove="tag">
+<form action="#" th:action="@{/FRQ3}" method="post" th:object="${Frq3model}">
+  <label>Person 1 RSVP</label>
+  <input type="checkbox" th:field="*{rsvp1}" /><br/>
+  <label>Person 2 RSVP</label>
+  <input type="checkbox" th:field="*{rsvp2}" /><br/>
+  <label>Person 1 Selection</label>
+  <input type="number" min="1" max="3" step="1" th:field="*{selection1}" /><br/>
+  <label>Person 2 Selection</label>
+  <input type="number" min="1" max="3" step="1" th:field="*{selection2}" /><br/>
+  <button type="submit">Submit</button></form>
+</div>
+</body>
+</html>

@@ -1,10 +1,13 @@
 package com.nighthawk.csa.controllers;
+import java.util.*;
 
+import com.nighthawk.csa.kianfrqs.frq3model;
 import com.nighthawk.csa.starters.ImageInfo;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -100,5 +103,4 @@ public class MainController {
         model.addAttribute("url", "https://padlet.com/jmortensen7/csa2022tri2");
         return "course/timelines";
     }
-
 }

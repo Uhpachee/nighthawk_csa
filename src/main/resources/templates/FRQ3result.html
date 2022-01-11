@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html xmlns:layout="http://www.w3.org/1999/xhtml" xmlns:th="http://www.w3.org/1999/xhtml"
+      layout:decorate="~{layout1}" lang="en">
+<head><div layout:fragment="metadata" th:remove="tag">
+    <title>FRQ3 Result</title></div>
+</head>
+<body><div layout:fragment="content" th:remove="tag">
+<div align="center">
+    <h2>FRQ3 Result</h2>
+    <span>Is person 1 attending?</span><span th:text="${Frq3model.rsvp1}"></span><br/>
+    <span>E-mail:</span><span th:text="${Frq3model.rsvp2}"></span><br/>
+    <span>Password:</span><span th:text="${Frq3model.selection1}"></span><br/>
+    <span>Gender:</span><span th:text="${Frq3model.selection2}"></span><br/>
+    <span>Profession:</span><span th:text="${user.profession}"></span><br/>
+    <span>Married?</span><span th:text="${user.married}"></span><br/>
+    <span>Note:</span><span th:text="${user.note}"></span><br/>
+</div></div>
+</body>
+</html>
