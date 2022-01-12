@@ -10,6 +10,7 @@ public class frq3model {
     private static boolean rsvp2;
     private static int selection1;
     private static int selection2;
+    private static String result = FRQ3.run(rsvp1,selection1,rsvp2,selection2);;
 
 
     public boolean getRsvp1() { return rsvp1; }
@@ -28,18 +29,17 @@ public class frq3model {
         this.selection2 = newSelection2;
     }
 
-
-    @Override
+    /*@Override
     public String toString() {
         return String.format(String.valueOf(rsvp1), rsvp2, selection1, selection2);
     }
 
-    String result = FRQ3.run(rsvp1,selection1,rsvp2,selection2);
 
-    public static void main(String[] args) {
+
+    /*public static void main(String[] args) {
         FRQ3 c = new FRQ3();
         c.run(rsvp1, selection1, rsvp2, selection2);
     }
 
-
+*/
 }

@@ -2,8 +2,6 @@ package com.nighthawk.csa.kianfrqs;
 
 public class FRQ3 {
     private static String finalString;
-    private boolean rsvp;
-    private int selection;
 
 
 
