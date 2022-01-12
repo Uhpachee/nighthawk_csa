@@ -1,17 +1,15 @@
 package com.nighthawk.csa.kianfrqs;
 
 public class FRQ3 {
+    private static String finalString;
     private boolean rsvp;
     private int selection;
-    private String option1;
-    private String option2;
-    private String finalString;
-
-    public String FRQ3(boolean rsvp, int selection) {
 
 
+
+    public static String FRQ3(boolean rsvp, int selection) {
         if (rsvp == true) {
-            finalString = "Thank you for attending! You will be served ";
+            String finalString = "Thank you for attending! You will be served ";
             if (selection == 3) {
                 finalString = finalString.concat("pasta.");
             }
@@ -27,21 +25,21 @@ public class FRQ3 {
         }
         return finalString;
     }
-    public void run(boolean rsvp1, int selection1, boolean rsvp2, int selection2) {
-        option1 = FRQ3(rsvp1, selection1);
-        option2 = FRQ3(rsvp2,selection2);
-        System.out.println("Person 1: " + option1);
-        System.out.println("Person 2: " + option2);
+
+    public static String run(boolean rsvp1, int selection1, boolean rsvp2, int selection2) {
+        String option1 = FRQ3(rsvp1, selection1);
+        String option2 = FRQ3(rsvp2,selection2);
+        String attendance;
+
 
         if (option1 == option2) {
-            System.out.println("true");
+            attendance = "true";
         }
         else {
-            System.out.println("false");
+            attendance = "false";
         }
+        String output = "Person 1: " + option1 + "\nPerson 2: " + option2 + "\n Are they both attending? " + attendance;
+        return output;
     }
-    public static void main(String[] args) {
-        FRQ3 c = new FRQ3();
-        c.run(true, 3, false, 2);
-    }
+
 }
