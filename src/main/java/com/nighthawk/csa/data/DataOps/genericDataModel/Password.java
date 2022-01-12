@@ -1,4 +1,5 @@
-package com.nighthawk.csa.mvc.DataOps.genericDataModel;
+package com.nighthawk.csa.data.DataOps.genericDataModel;
+import com.nighthawk.csa.consoleUI.ConsoleMethods;
 
 import java.util.ArrayList;
 import java.util.Random;
@@ -37,7 +38,7 @@ public class Password {
     }
 
     public static void main(String[] args) {
-        com.nighthawk.csa.kianfrqs.Password c = new com.nighthawk.csa.kianfrqs.Password();
+        Password c = new Password();
         c.passGen();
 
 
