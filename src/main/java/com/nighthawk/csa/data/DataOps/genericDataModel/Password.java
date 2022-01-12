@@ -8,7 +8,7 @@ public class Password extends Generics {
 
     public enum KeyType {title, password}
     public static Password.KeyType key = Password.KeyType.title;
-    private static final int size = 16;
+    private static final int number = 10;
     private final String password;
 
     public Password(String l)
@@ -39,46 +39,36 @@ public class Password extends Generics {
 
     public static int passChar() {
         Random rand = new Random();
-        int result = rand.nextInt(52);
+        int result = rand.nextInt(a.length());
         return result;
     }
 
     public static int passNum() {
         Random rand = new Random();
-        int result = rand.nextInt(20);
+        int result = rand.nextInt(b.length());
         return result;
     }
 
-    public void passGen() {
-        String tempString = "";
-        for (int i = 1; i < 11; i++) {
-            for (int l = 1; l < 8; l++) {
+    public static String passGen() {
+        String tempString ="";
+        for (int l = 1; l < 16; l++) {
+            Random rand = new Random();
+            int pick = rand.nextInt(10);
+            if(pick >= 4) {
                 tempString += a.charAt(passChar());
+            }
+            else {
                 tempString += b.charAt(passNum());
             }
-            passList.add(tempString);
-            tempString = "";
-        }
-        for (int i = 0; i < passList.size(); i++){
-            System.out.println(passList.get(i));
-        }
-
-    }
-
-    public static String passGen1() {
-        String tempString ="";
-        for (int l = 1; l < 8; l++) {
-            tempString += a.charAt(passChar());
-            tempString += b.charAt(passNum());
         }
         return tempString;
     }
 
     public static Generics[] passwordData()
-    {	Generics[] password = new Password[Password.size];
-        for (int i = 0; i < Password.size; i++)
+    {	Generics[] password = new Password[Password.number];
+        for (int i = 0; i < Password.number; i++)
         {
-            password[i] = new Password( (String)(passGen1()) );
+            password[i] = new Password( (String)(passGen()) );
         }
         return password;
     }
