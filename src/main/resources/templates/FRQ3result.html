@@ -7,11 +7,11 @@
 <body><div layout:fragment="content" th:remove="tag">
 <div align="center">
     <h2>FRQ3 Result</h2>
-    <span>Is person 1 attending?</span><span th:text="${Frq3model.rsvp1}"></span><br/>
-    <span>Is person 2 attending?</span><span th:text="${Frq3model.rsvp2}"></span><br/>
-    <span>Person 1 Selection</span><span th:text="${Frq3model.selection1}"></span><br/>
-    <span>Person 2 Selection</span><span th:text="${Frq3model.selection2}"></span><br/>
-    <span>Result:</span><span th:text="${Frq3model.result}"></span><br/>
+    <span>Is person 1 attending?</span><span th:text="${data.rsvp1}"></span><br/>
+    <span>Is person 2 attending?</span><span th:text="${data.rsvp2}"></span><br/>
+    <span>Person 1 Selection: </span><span th:text="${data.selection1}"></span><br/>
+    <span>Person 2 Selection: </span><span th:text="${data.selection2}"></span><br/>
+    <span>Result: </span><span th:text="${data.result}"></span><br/>
 </div></div>
 </body>
 </html>

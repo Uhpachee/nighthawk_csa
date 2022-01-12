@@ -6,7 +6,7 @@
   <title>Kian's FRQ3</title></div>
 </head>
 <body><div layout:fragment="content" th:remove="tag">
-<form action="#" th:action="@{/FRQ3}" method="post" th:object="${Frq3model}">
+<form action="#" th:action="@{/FRQ3}" method="post" th:object="${data}">
   <label>Person 1 RSVP</label>
   <input type="checkbox" th:field="*{rsvp1}" /><br/>
   <label>Person 2 RSVP</label>
