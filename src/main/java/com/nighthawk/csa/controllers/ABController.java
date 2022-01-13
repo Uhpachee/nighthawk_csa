@@ -39,6 +39,9 @@ public class ABController {
     @GetMapping("/shekar")
     // CONTROLLER handles GET request for /greeting, maps it to greeting() and does variable bindings
     public String shekar() {
-        return "shekar";
-    }
+        return "shekar"; }
+    @GetMapping("/playgame")
+    // CONTROLLER handles GET request for /greeting, maps it to greeting() and does variable bindings
+    public String playgame() {
+        return "playgame"; }
 }
