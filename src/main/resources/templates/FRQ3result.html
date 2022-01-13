@@ -4,14 +4,29 @@
 <head><div layout:fragment="metadata" th:remove="tag">
     <title>FRQ3 Result</title></div>
 </head>
-<body><div layout:fragment="content" th:remove="tag">
-<div align="center">
-    <h2>FRQ3 Result</h2>
-    <span>Is person 1 attending?</span><span th:text="${data.rsvp1}"></span><br/>
-    <span>Is person 2 attending?</span><span th:text="${data.rsvp2}"></span><br/>
-    <span>Person 1 Selection: </span><span th:text="${data.selection1}"></span><br/>
-    <span>Person 2 Selection: </span><span th:text="${data.selection2}"></span><br/>
-    <span>Result: </span><span th:text="${result}"></span><br/>
+
+<body style="background-image: url(https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/114-5-an-al-fresco-dinner-in-east-hampton-1567102832.jpg)"><div layout:fragment="content" th:remove="tag">
+<div style="display: flex;
+        flex-direction: column;
+justify-content: center">
+    <h1 style="font-size:75px;
+        color: White;
+        font-weight: bold;
+        margin:auto;
+        margin-top: 20px;
+        "
+    >FRQ 3 Result!</h1>
+    <p style="
+    font-size: x-large;
+        border-radius: 10px;
+        color: #555555;
+        background-color: #eeeeee;
+        border: #dddddd 2px solid;
+       margin: 40px 200px;
+       text-align: center;
+       padding: 50px 25px;
+"
+    ><span>Result: </span><span th:text="${result}"></span></p>
 </div></div>
 </body>
 </html>

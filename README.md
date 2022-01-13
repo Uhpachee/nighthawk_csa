@@ -15,7 +15,7 @@ Review Ticket w/ Tangibles: https://github.com/shekark642/M222-Slackbotss/issues
 People | Role | Progress |
 -------------  | -------------- | -------------- |
 Abhijay  | Scrum Master | Assigned more issues and got everyone to work. Worked on individual and overall about page and got the frontend done for that. |
-Justin   | Deployment Manager |  Finally finished deployment and the website is up and running now. coolermathgames.ml |
+Justin   | Deployment Manager |  Finished deployment and the website is up and running now. coolermathgames.ml |
 Kian   | Design Manager | Made more frontend and worked on unit 2 frq and finished that stuff. |
 Rohan   | Technical Officer | Worked on the database and got started on the process for that. |
 Shekar   | Github Admin | Completed the github wiki and worked on the part where he worked on the insights and showed those off. |
