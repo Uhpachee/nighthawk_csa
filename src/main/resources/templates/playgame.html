@@ -109,18 +109,7 @@
         article.wrapper section > div.card.hearts {
             color: black;
         }
-        article.wrapper section > div.card.spades span.name:after {
-            content: "\2660";
-        }
-        article.wrapper section > div.card.diamonds span.name:after {
-            content: "\2666";
-        }
-        article.wrapper section > div.card.clubs span.name:after {
-            content: "\2663";
-        }
-        article.wrapper section > div.card.hearts span.name:after {
-            content: "\2665";
-        }
+
         article.wrapper section > div div[data-points]:after {
             content: attr(data-points);
             margin: 0 0 0 5px;
@@ -158,7 +147,6 @@
 
         //          ['Spades', 'Diamonds', 'Clubs', 'Hearts']
         var suitNames = ['spades', 'diamonds', 'clubs', 'hearts'],
-            suitCodes = ['\u2660', '\u2666', '\u2663', '\u2665'],
             Card = function(index){
                 this.index = index;
                 this.value = (index % 13)+1;
@@ -184,10 +172,6 @@
             get name() {
                 var numberName = (function(n){
                     switch(n){
-                        case 'A': return 'Ace';
-                        case 'K': return 'King';
-                        case 'Q': return 'Queen';
-                        case 'J': return 'Jack';
                         default: return n;
                     }
                 })(this.number);
