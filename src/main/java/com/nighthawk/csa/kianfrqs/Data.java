@@ -9,7 +9,7 @@ public class Data {
     private static boolean rsvp2;
     private static int selection1;
     private static int selection2;
-    public static String result = run(rsvp1,selection1,rsvp2,selection2);
+    //public static String result = run(rsvp1,rsvp2,selection1,selection2);
 
 
     public boolean getRsvp1() { return rsvp1; }
@@ -48,11 +48,10 @@ public class Data {
         return finalString;
     }
 
-    public static String run(boolean rsvp1, int selection1, boolean rsvp2, int selection2) {
+    public static String run(boolean rsvp1, boolean rsvp2, int selection1, int selection2) {
         String option1 = FRQ3(rsvp1, selection1);
         String option2 = FRQ3(rsvp2,selection2);
         String attendance;
-        System.out.println("yes" + rsvp1 + rsvp2 + selection1 + selection2);
 
         if (option1 == option2) {
             attendance = "Yes!";
@@ -70,10 +69,10 @@ public class Data {
 
 
 
-    /*public static void main(String[] args) {
+ /*   public static void main(String[] args) {
         FRQ3 c = new FRQ3();
         c.run(rsvp1, selection1, rsvp2, selection2);
     }
-
 */
+
 }
