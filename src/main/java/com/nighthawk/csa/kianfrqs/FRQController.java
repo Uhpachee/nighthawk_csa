@@ -23,12 +23,8 @@ public class FRQController {
     @PostMapping("/FRQ3")
     public String submitForm(@ModelAttribute("data") Data data, Model model) {
         System.out.println(data);
-        //ArrayList<String> dataList = new ArrayList<String>(Arrays.asList("false", "true", "3", "2"));
-        //dataList.add(String.valueOf(data));
-        //Data.run(Boolean.parseBoolean(dataList.get(0)), Boolean.parseBoolean(dataList.get(1)), Integer.parseInt(dataList.get(2)), Integer.parseInt(dataList.get(3)));
         String result = Data.run(data.getRsvp1(), data.getRsvp2(), data.getSelection1(), data.getSelection2());
         model.addAttribute("result", result);
-        System.out.println(result);
         return "FRQ3result";
     }
 
