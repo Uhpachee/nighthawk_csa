@@ -1,5 +1,7 @@
 package com.nighthawk.csa.kianfrqs;
-
+import com.nighthawk.csa.consoleUI.ConsoleMethods;
+import com.nighthawk.csa.data.DataOps.genericDataModel.Generics;
+import com.nighthawk.csa.data.DataOps.genericDataModel.Password;
 import java.util.ArrayList;
 import java.util.Arrays;
 
@@ -27,6 +29,38 @@ public class FRQController {
         model.addAttribute("result", result);
         return "FRQ3result";
     }
+
+    @GetMapping("/FRQ6")
+    public String FRQ6(Model model) {
+        FRQ6p2 fRQ6p2 = new FRQ6p2();
+        model.addAttribute("fRQ6p2", fRQ6p2);
+        return "FRQ6";
+    }
+
+    @PostMapping("/FRQ6")
+    public String submitForm(@ModelAttribute("fRQ6p2") FRQ6p2 fRQ6p2, Model model) {
+        String result = FRQ6p2.computeWages(fRQ6p2.getFixedWage(), fRQ6p2.getPerItemWage());
+        model.addAttribute("result", result);
+        return "FRQ6result";
+    }
+
+    /*@GetMapping("/passwordGenerator")
+    public String passwordGenerator(Model model) {
+        Password password = new Password();
+        model.addAttribute("password", password);
+        System.out.println(password);
+        return "passwordGenerator";
+    }
+
+    @PostMapping("/passwordGenerator")
+    public String submitForm(@ModelAttribute("password") Password password, Model model) {
+        System.out.println(password);
+        Generics[] result = Password.passwordData(password.getLength());
+        for(Generics a : result)
+            ConsoleMethods.println("" + a);
+        model.addAttribute("result", result);
+        return "passwordGenerated";
+    }*/
 
 
 }

@@ -5,6 +5,9 @@ import java.util.ArrayList;
 import java.util.Random;
 
 public class Password extends Generics {
+    private static int length;
+    public int getLength() { return length; }
+    public void setLength(int newLength) { this.length = newLength; }
 
     public enum KeyType {title, password}
     public static Password.KeyType key = Password.KeyType.title;
@@ -49,9 +52,10 @@ public class Password extends Generics {
         return result;
     }
 
-    public static String passGen() {
+    public static String passGen(/*int length*/) {
         String tempString ="";
-        for (int l = 1; l < 16; l++) {
+
+        for (int l = 1; l < 16/*length*/; l++) {
             Random rand = new Random();
             int pick = rand.nextInt(10);
             if(pick >= 4) {
@@ -64,18 +68,18 @@ public class Password extends Generics {
         return tempString;
     }
 
-    public static Generics[] passwordData()
+    public static Generics[] passwordData(/*int length*/)
     {	Generics[] password = new Password[Password.number];
         for (int i = 0; i < Password.number; i++)
         {
-            password[i] = new Password( (String)(passGen()) );
+            password[i] = new Password( (String)(passGen(/*length*/)) );
         }
         return password;
     }
 
     public static void main(String[] args)
     {
-        Generics[] passData = passwordData();
+        Generics[] passData = passwordData(/*length*/);
         for(Generics a : passData)
             ConsoleMethods.println("" + a);
     }
