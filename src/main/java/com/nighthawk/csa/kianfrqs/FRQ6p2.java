@@ -1,4 +1,6 @@
 package com.nighthawk.csa.kianfrqs;
+import java.math.RoundingMode;
+import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -22,14 +24,17 @@ public class FRQ6p2 {
 
     public static String computeWages(double fixedWage, double perItemWage)
     {
+        String pattern = "###,###.##";
+        DecimalFormat df = new DecimalFormat(pattern);
+        df.setRoundingMode(RoundingMode.DOWN);
         String totals = "";
         for(int a : itemsSold) {
             double wage = fixedWage + a * perItemWage;
             if(computeBonusThreshold(a)) {
-                wage = wage*1.1-0.00000000000001;
+                wage = wage*1.1;
             }
             wages.add(wage);
-            totals += "Wage " + itemsSold.indexOf(a) + ": " + String.valueOf(wage) + ", ";
+            totals += "Wage " + itemsSold.indexOf(a) + ": $" + df.format(wage) + ", ";
         }
 
 
