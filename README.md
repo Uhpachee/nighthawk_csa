@@ -6,7 +6,7 @@ The games will be pulled in from an API, as well as personally customed by us.
 
 Group members: [Justin](https://github.com/jli615), [Rohan](https://github.com/RohanKoshy), [Shekar](https://github.com/shekark642), [Abhijay](https://github.com/Dubshott), [Kian](https://github.com/Uhpachee)
 
-Group members' replit profiles: [Justin](https://replit.com/@JustinLi38) (https://replit.com/@shekark642) 
+Group members' replit profiles: [Justin](https://replit.com/@JustinLi38) [Shekar](https://replit.com/@shekark642) 
 
 ## Week 5
 
