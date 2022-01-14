@@ -6,7 +6,33 @@ The games will be pulled in from an API, as well as personally customed by us.
 
 Group members: [Justin](https://github.com/jli615), [Rohan](https://github.com/RohanKoshy), [Shekar](https://github.com/shekark642), [Abhijay](https://github.com/Dubshott), [Kian](https://github.com/Uhpachee)
 
-Group members' replit profiles: [Justin](https://replit.com/@JustinLi38)
+Group members' replit profiles: [Justin](https://replit.com/@JustinLi38) (https://replit.com/@shekark642) 
+
+## Week 5
+
+Review Ticket w/ Tangibles: https://github.com/shekark642/M222-Slackbotss/issues/17
+
+People | Role | Progress |
+-------------  | -------------- | -------------- |
+Abhijay  | Scrum Master | Added to the main games page, template created for the review page |
+Justin   | Deployment Manager | Worked on MVC, got that finished |
+Kian   | Design Manager | Worked on extra credit arraylist code, got MVC finished |
+Rohan   | Technical Officer | Worked on database again, got MySQL to work on backend |
+Shekar   | Github Admin | Added game to playable games, updated home page and jekyll pages |
+
+## Week 4
+
+Review Ticket w/ Tangibles: https://github.com/shekark642/M222-Slackbotss/issues/17
+
+People | Role | Progress |
+-------------  | -------------- | -------------- |
+Abhijay  | Scrum Master | Fixed about us pages, updated scrum board |
+Justin   | Deployment Manager | Worked on localohost errors with NginX, finished about us page |
+Kian   | Design Manager | Worked on Hackathon, used javascript to make navbar better |
+Rohan   | Technical Officer | Worked on database, installed MySQL on the repo |
+Shekar   | Github Admin | Updated wiki guide, added frq pages to the navbar |
+
+
 
 ## Week 3
 
