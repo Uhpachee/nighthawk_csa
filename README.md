@@ -1,12 +1,40 @@
 # Welcome
 This is the project of the one and only p2-slackbots and our project is called Cooler Math Games!
 
+[Our Jekyll page:](shekark642.github.io/slackbots-p2)
+
 Main idea: Our website is the go-to place for gamers. All kinds of stuff relating to gaming, we got it! We implement information pages for gamers (or non-gamers) to look at to learn, and we also have real games for users to play. Come to this website for real time information, games you can play directly on the website, and redirection to real games. Have fun!
 The games will be pulled in from an API, as well as personally customed by us.
 
 Group members: [Justin](https://github.com/jli615), [Rohan](https://github.com/RohanKoshy), [Shekar](https://github.com/shekark642), [Abhijay](https://github.com/Dubshott), [Kian](https://github.com/Uhpachee)
 
-Group members' replit profiles: [Justin](https://replit.com/@JustinLi38)
+Group members' replit profiles: [Justin](https://replit.com/@JustinLi38) [Shekar](https://replit.com/@shekark642) 
+
+## Week 5
+
+Review Ticket w/ Tangibles: https://github.com/shekark642/M222-Slackbotss/issues/17
+
+People | Role | Progress |
+-------------  | -------------- | -------------- |
+Abhijay  | Scrum Master | Added to the main games page, template created for the review page |
+Justin   | Deployment Manager | Got MVC finished, set up team's Github Pages and Jekyll |
+Kian   | Design Manager | Worked on extra credit arraylist code, got MVC finished |
+Rohan   | Technical Officer | Worked on database again, got MySQL to work on backend |
+Shekar   | Github Admin | Added game to playable games, updated home page and jekyll pages |
+
+## Week 4
+
+Review Ticket w/ Tangibles: https://github.com/shekark642/M222-Slackbotss/issues/17
+
+People | Role | Progress |
+-------------  | -------------- | -------------- |
+Abhijay  | Scrum Master | Fixed about us pages, updated scrum board |
+Justin   | Deployment Manager | Worked on localohost errors with NginX, finished about us page |
+Kian   | Design Manager | Worked on Hackathon, used javascript to make navbar better |
+Rohan   | Technical Officer | Worked on database, installed MySQL on the repo |
+Shekar   | Github Admin | Updated wiki guide, added frq pages to the navbar |
+
+
 
 ## Week 3
 
