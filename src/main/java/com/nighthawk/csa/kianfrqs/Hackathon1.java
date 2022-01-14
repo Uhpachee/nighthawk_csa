@@ -1,4 +1,4 @@
-package com.nighthawk.csa.hackathon;
+package com.nighthawk.csa.kianfrqs;
 import java.util.Scanner;
 
 

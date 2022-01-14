@@ -30,8 +30,8 @@ import java.util.ArrayList;
                 tempString = "";
             }
 
-            for (int i = 0; i < passList.size(); i++){
-                System.out.println(passList.get(i));
+            for (String s : passList) {
+                System.out.println(s);
             }
         }
 
