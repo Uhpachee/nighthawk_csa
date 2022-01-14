@@ -1,7 +1,7 @@
 # Welcome
 This is the project of the one and only p2-slackbots and our project is called Cooler Math Games!
 
-[Our Jekyll page:](https://shekark642.github.io/slackbots-p2/)
+[Our Jekyll page:](shekark642.github.io/slackbots-p2)
 
 Main idea: Our website is the go-to place for gamers. All kinds of stuff relating to gaming, we got it! We implement information pages for gamers (or non-gamers) to look at to learn, and we also have real games for users to play. Come to this website for real time information, games you can play directly on the website, and redirection to real games. Have fun!
 The games will be pulled in from an API, as well as personally customed by us.
@@ -17,7 +17,7 @@ Review Ticket w/ Tangibles: https://github.com/shekark642/M222-Slackbotss/issues
 People | Role | Progress |
 -------------  | -------------- | -------------- |
 Abhijay  | Scrum Master | Added to the main games page, template created for the review page |
-Justin   | Deployment Manager | Worked on MVC, got that finished |
+Justin   | Deployment Manager | Got MVC finished, set up team's Github Pages and Jekyll |
 Kian   | Design Manager | Worked on extra credit arraylist code, got MVC finished |
 Rohan   | Technical Officer | Worked on database again, got MySQL to work on backend |
 Shekar   | Github Admin | Added game to playable games, updated home page and jekyll pages |
