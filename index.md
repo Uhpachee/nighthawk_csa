@@ -15,7 +15,7 @@ Review Ticket w/ Tangibles: https://github.com/shekark642/M222-Slackbotss/issues
 People | Role | Progress |
 -------------  | -------------- | -------------- |
 Abhijay  | Scrum Master | Added to the main games page, template created for the review page |
-Justin   | Deployment Manager | Worked on MVC, got that finished |
+Justin   | Deployment Manager | Got MVC finished, set up team's Github Pages and Jekyll |
 Kian   | Design Manager | Worked on extra credit arraylist code, got MVC finished |
 Rohan   | Technical Officer | Worked on database again, got MySQL to work on backend |
 Shekar   | Github Admin | Added game to playable games, updated home page and jekyll pages |
