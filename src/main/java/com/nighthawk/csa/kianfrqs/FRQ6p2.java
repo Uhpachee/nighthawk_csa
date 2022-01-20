@@ -24,7 +24,7 @@ public class FRQ6p2 {
 
     public static String computeWages(double fixedWage, double perItemWage)
     {
-        String pattern = "###,###.##";
+        String pattern = "###,###,###.##";
         DecimalFormat df = new DecimalFormat(pattern);
         df.setRoundingMode(RoundingMode.DOWN);
         String totals = "";
