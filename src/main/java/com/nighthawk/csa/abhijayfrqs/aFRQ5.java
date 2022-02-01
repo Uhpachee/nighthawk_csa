@@ -1,12 +1,12 @@
 package com.nighthawk.csa.abhijayfrqs;
 
-public class FRQ5 {
+public class aFRQ5 {
     private static String hostName;
     private String address;
     private String name;
     private String age;
 
-    public FRQ5(String n, String a, String c, String d)
+    public aFRQ5(String n, String a, String c, String d)
         {
             hostName = n;
             address = a;

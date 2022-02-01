@@ -3,7 +3,7 @@ package com.nighthawk.csa.abhijayfrqs;
 import java.util.ArrayList;
 import java.util.Random;
 
-    public class Password {
+    public class aPassword {
         private static final String a = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
         private static final String b = "0123456789!@#$%^&*()";
         private static ArrayList<String> passList = new ArrayList<String>();
@@ -37,7 +37,7 @@ import java.util.Random;
         }
 
         public static void main(String[] args) {
-            Password c = new Password();
+            aPassword c = new aPassword();
             c.passGen();
 
 

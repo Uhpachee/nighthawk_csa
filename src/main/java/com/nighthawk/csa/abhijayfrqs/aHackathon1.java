@@ -2,7 +2,7 @@ package com.nighthawk.csa.abhijayfrqs;
 import java.util.Scanner;
 
 
-public class Hackathon1 {
+public class aHackathon1 {
     public static void longestStreak(String str) {
         int longestCount = 0;
         char longestChar = 'a';
@@ -42,7 +42,7 @@ public class Hackathon1 {
         System.out.printf("End index:" + endIndex);
     }
     public static void main(String[] args) {
-        Hackathon1 c = new Hackathon1();
+        aHackathon1 c = new aHackathon1();
         c.longestStreak("CCAAAATTT!");
     }
 }

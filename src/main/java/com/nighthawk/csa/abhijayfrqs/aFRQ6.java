@@ -3,7 +3,7 @@ package com.nighthawk.csa.abhijayfrqs;
 import java.util.ArrayList;
 import java.util.Arrays;
 
-public class FRQ6 {
+public class aFRQ6 {
     private static ArrayList<String> words = new ArrayList<>( Arrays.asList("ten", "fading", "post", "card", "thunder", "hinge", "trailing", "batting"));
 
     public void printWords() {
@@ -19,7 +19,7 @@ public class FRQ6 {
 
 
     public static void main(String[] args) {
-        FRQ6 c = new FRQ6();
+        aFRQ6 c = new aFRQ6();
         c.printWords();
     }
 }

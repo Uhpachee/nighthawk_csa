@@ -1,7 +1,7 @@
 package com.nighthawk.csa.abhijayfrqs;
 
 
-public class Data {
+public class aData {
     private static boolean rsvp1;
     private static boolean rsvp2;
     private static int selection1;

@@ -2,7 +2,7 @@ package com.nighthawk.csa.abhijayfrqs;
 
 import java.util.Scanner;
 
-public class ClassActivity {
+public class aClassActivity {
     private static String name;
     private static String address;
     private static String age;
@@ -54,7 +54,7 @@ public class ClassActivity {
         }
     }
     public static void main(String[] args) {
-        ClassActivity c = new ClassActivity();
+        aClassActivity c = new aClassActivity();
         Scanner myObj = new Scanner(System.in);  // Create a Scanner object
         System.out.println("Enter name");
         Scanner myObj1 = new Scanner(System.in);

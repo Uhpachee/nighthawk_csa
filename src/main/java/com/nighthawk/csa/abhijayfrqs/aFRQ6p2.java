@@ -6,7 +6,7 @@ import java.util.Arrays;
 import java.util.List;
 
 
-public class FRQ6p2 {
+public class aFRQ6p2 {
     private double fixedWage;
     private double perItemWage;
     public double getFixedWage() { return fixedWage; }
@@ -41,7 +41,7 @@ public class FRQ6p2 {
         return totals;
     }
     public static void main(String[] args) {
-        FRQ6p2 c = new FRQ6p2();
+        aFRQ6p2 c = new aFRQ6p2();
         computeWages(10, 1.5);
         System.out.println("Wages:");
         for(double a : wages) {

@@ -2,7 +2,7 @@
 
 package com.nighthawk.csa.abhijayfrqs;
 
-public class FRQ3 {
+public class aFRQ3 {
     private static String finalString;
 
 

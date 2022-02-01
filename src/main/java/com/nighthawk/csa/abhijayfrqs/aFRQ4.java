@@ -2,11 +2,11 @@ package com.nighthawk.csa.abhijayfrqs;
 
 import java.util.Random;
 
-public class FRQ4 {
+public class aFRQ4 {
     private int startingCoins; // starting number of coins
     private int maxRounds; // maximum number of rounds played
 
-    public FRQ4(int s, int r)
+    public aFRQ4(int s, int r)
     {
         startingCoins = s;
         maxRounds = r;
@@ -81,7 +81,7 @@ public class FRQ4 {
     }
 
 public static void main(String[] args) {
-        FRQ4 c = new FRQ4(10, 20);
+        aFRQ4 c = new aFRQ4(10, 20);
         c.playGame();
     }
 

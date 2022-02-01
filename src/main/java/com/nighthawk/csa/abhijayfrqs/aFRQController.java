@@ -9,33 +9,33 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 
 @Controller
-public class FRQController {
-    @GetMapping("/FRQ3")
+public class aFRQController {
+    @GetMapping("/aFRQ3")
     public String FRQ3(Model model) {
-        Data data = new Data();
+        aData data = new aData();
         model.addAttribute("data", data);
         System.out.println(data);
         return "abhijayFRQ3";
     }
 
-    @PostMapping("/FRQ3")
-    public String submitForm(@ModelAttribute("data") Data data, Model model) {
+    @PostMapping("/aFRQ3")
+    public String submitForm(@ModelAttribute("data") aData data, Model model) {
         System.out.println(data);
-        String result = Data.run(data.getRsvp1(), data.getRsvp2(), data.getSelection1(), data.getSelection2());
+        String result = aData.run(data.getRsvp1(), data.getRsvp2(), data.getSelection1(), data.getSelection2());
         model.addAttribute("result", result);
         return "abhijayFRQ3result";
     }
 
-    @GetMapping("/FRQ6")
+    @GetMapping("/aFRQ6")
     public String FRQ6(Model model) {
-        FRQ6p2 fRQ6p2 = new FRQ6p2();
+        aFRQ6p2 fRQ6p2 = new aFRQ6p2();
         model.addAttribute("fRQ6p2", fRQ6p2);
         return "abhijayFRQ6";
     }
 
-    @PostMapping("/FRQ6")
-    public String submitForm(@ModelAttribute("FRQ6p2") FRQ6p2 fRQ6p2, Model model) {
-        String result = FRQ6p2.computeWages(fRQ6p2.getFixedWage(), fRQ6p2.getPerItemWage());
+    @PostMapping("/aFRQ6")
+    public String submitForm(@ModelAttribute("FRQ6p2") aFRQ6p2 fRQ6p2, Model model) {
+        String result = aFRQ6p2.computeWages(fRQ6p2.getFixedWage(), fRQ6p2.getPerItemWage());
         model.addAttribute("result", result);
         return "abhijayFRQ6result";
     }

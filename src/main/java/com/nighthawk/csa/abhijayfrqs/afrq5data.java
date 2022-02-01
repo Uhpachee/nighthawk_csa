@@ -1,6 +1,6 @@
 package com.nighthawk.csa.abhijayfrqs;
 
-public class frq5data {
+public class afrq5data {
 
     // This is the stuff that defines all the information
     private static String hostName;
@@ -26,7 +26,7 @@ public class frq5data {
 
 
     // Here we start to run that actual program and finish FRQ 5
-    public frq5data(String n, String a, String c, String d)
+    public afrq5data(String n, String a, String c, String d)
     {
         hostName = n;
         address = a;
