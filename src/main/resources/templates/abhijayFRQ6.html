@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html xmlns:layout="http://www.w3.org/1999/xhtml" xmlns:th="http://www.w3.org/1999/xhtml"
+      layout:decorate="~{layout1}" lang="en">
+<head><div layout:fragment="metadata" th:remove="tag">
+    <meta charset="UTF-8">
+    <title>Kian's FRQ6</title></div>
+</head>
+<body><div layout:fragment="content" th:remove="tag">
+    <form action="#" th:action="@{/FRQ6}" method="post" th:object="${fRQ6p2}">
+        <label>Fixed Wage</label>
+        <input type="number" step="0.01" th:field="*{fixedWage}" /><br/>
+        <label>Price per Item</label>
+        <input type="number" step="0.01" th:field="*{perItemWage}" /><br/>
+        <button type="submit">Submit</button></form>
+</div>
+</body>
+</html>
