@@ -42,6 +42,30 @@
             </li>
 
 
+            <!-- Putting Search on Nav Bar -->
+            <div class="px-3">
+                <input id="search" type="search" placeholder="Search" aria-label="Search">
+            </div>
+
+            <script>
+                const search = document.getElementById('search');
+                const google = 'https://www.google.com/search?q=site%3A+';
+                const site = 'https://coolermathgames.ml';
+
+                function submitted(event) {
+                    if (event.key === 'Enter') {
+                        event.preventDefault();
+                        const url = google
+                            + site
+                            + '+'
+                            + search.value;
+                        const win = window.open(url, '_blank');
+                        win.focus();
+                    }
+                }
+                search.addEventListener('keypress', submitted);
+            </script>
+
             <li style="cursor: default">|</li>
             <!--           <li class="nav-item dropdown">
                            <a class="nav-link dropdown-toggle navtext" href="#" id="navbarPal" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
