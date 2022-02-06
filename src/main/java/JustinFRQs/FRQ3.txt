@@ -1,0 +1,95 @@
+public class DinnerParty {
+  boolean rsvp;
+  int selection;
+  String option1;
+  String option2;
+
+  //constructor
+
+  public DinnerParty (boolean reserve, int select) {
+
+      rsvp = reserve;
+      selection = select;
+
+  }
+
+  /*part a
+  Write a code segment that prints "attending" if rsvp is true and prints "not attending" otherwise.
+  */
+
+  public void PartA () {
+    if (rsvp == true) {
+      System.out.println("attending");
+    } else {
+      System.out.println("not attending");
+    }
+  }
+
+  /*part b
+  Write a code segment that prints the food item associated with selection. For example, if selection is 3, the code segment should print "pasta".
+  an int variable named selection, where 1 represents "beef", 2 represents "chicken", 3 represents "pasta", and all other values represent "fish"
+  */
+
+  public void PartB () {
+    if (selection == 1) {
+      System.out.println("beef");
+    } else if (selection == 2) {
+      System.out.println("chicken");
+    } else if (selection == 3) {
+      System.out.println("pasta");
+    } else {
+      System.out.println("fish");
+    }
+  }
+
+  /*part c
+  Write a code segment that will store a dinner selection in option1 based on the values of rsvp and selection. The intended behavior of the code segment is described below.
+
+  If rsvp is true, the code segment should store in option1 a string indicating the person’s attendance and food choice. For example, if rsvp is true and selection is 1, the following string should be stored in option1.
+
+  "Thanks for attending. You will be served beef."
+
+  If rsvp is false, the following string should be stored in option1, regardless of the value of selection.
+
+  "Sorry you can't make it."
+  */
+
+
+  public String PartCOrder () {
+    String order = new String();
+    if (selection == 1) {
+      order = "beef";
+    } else if (selection == 2) {
+      order = "chicken";
+    } else if (selection == 3) {
+      order = "pasta";
+    } else {
+      order = "fish";
+    }
+
+    return order;
+  }
+
+  public void PartC () {
+    if (rsvp == true) {
+      option1 = "Thanks for attending. You will be served " + this.PartCOrder() + ".";
+    } else {
+      option1 = "Sorry you can't make it.";
+    }
+  }
+
+  /*part d
+  Write a code segment that will print true if the strings option1 and option2 contain the same values and will print false otherwise.
+  */
+
+  public void PartD () {
+    if (option1 == option2) {
+      System.out.println("true");
+    } else {
+      System.out.println("false");
+    }
+  }
+
+  //tester
+
+}

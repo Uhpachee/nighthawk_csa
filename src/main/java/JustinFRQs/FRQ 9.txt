@@ -1,0 +1,91 @@
+public class Animal {
+
+  private String type;
+  private String species;
+  private String name;
+
+  public Animal (String type, String species, String name) {
+    this.type = type;
+    this.species = species;
+    this.name = name;
+  }
+
+  public String toString() {
+    return this.name + " the " + this.species + " is a " + this.type;
+  }
+
+}
+
+public class Herbivore extends Animal {
+
+  public Herbivore (String species, String name) {
+    super("herbivore", species, name);
+  }
+
+
+}
+
+public class Elephant extends Herbivore {
+
+  private double tusk;
+
+  public Elephant (String name, double tusk) {
+    super("elephant", name);
+    this.tusk = tusk;
+
+  }
+
+  public String toString () {
+    return super.toString() + " with tusks " + this.tusk + " meters long";
+
+  }
+
+}
+
+public class Book {
+
+  protected String title;
+  protected String author;
+
+  public Book(String t, String a) {
+    this.title = t;
+    this.author = a;
+  }
+
+  public void printBookInfo() {
+    System.out.print(title + ", written by " + author);
+  }
+
+}
+
+public class PictureBook extends Book {
+
+  String artist;
+
+  public PictureBook(String t, String a, String artist) {
+    super(t, a);
+    this.artist = artist;
+  }
+
+  @Override
+  public void printBookInfo() {
+    System.out.println(super.title + ", written by " + super.author + " and illustrated by " + this.artist);
+  }
+
+}
+
+public class BookListing {
+
+  Book book;
+  double price;
+
+  public BookListing(Book book, double price) {
+    this.book = book;
+    this.price = price;
+  }
+
+  public void printDescription() {
+    this.book.printBookInfo();
+    System.out.println(" $" + price);
+  }
+}

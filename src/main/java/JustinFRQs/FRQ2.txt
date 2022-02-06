@@ -1,0 +1,59 @@
+public class LightSequence {
+
+  String sequence;
+// attributes not shown
+
+/** The parameter seq is the initial sequence used for
+* the light display
+*/
+
+  public LightSequence(String seq) {
+    sequence = seq;
+  }
+
+  /** Inserts the string segment in the current sequence,
+  * starting at the index ind. Returns the new sequence.
+  */
+
+  public String insertSegment(String segment, int ind) {
+    String front;
+    String back;
+    String total;
+    front = this.sequence.substring(0, ind);
+    back = this.sequence.substring(ind);
+    total = front + " " + segment + back;
+    return total;
+  }
+
+  /** Updates the sequence to the value in seq
+  */
+
+  public void changeSequence(String seq) {
+    sequence = seq;
+  }
+
+  /** Uses the current sequence to turn the light on and off
+  * for the show
+  */
+
+  public void display() {
+    System.out.println(this.sequence);
+  }
+
+  //part e
+  public void PartE(String seg, String old) {
+    String segment = seg;
+    String oldSeq = old;
+    int index = oldSeq.indexOf(segment);
+    String newSeq = oldSeq.substring(0, index) + oldSeq.substring(index + segment.length());
+    System.out.println("newSeq: " + newSeq);
+  }
+
+  //part f
+  public void PartF(double horizontal, double vertical) {
+    double a = horizontal;
+    double b = vertical;
+    double distance = Math.sqrt((a*a)+(b*b));
+    System.out.println(distance);
+  }
+}
