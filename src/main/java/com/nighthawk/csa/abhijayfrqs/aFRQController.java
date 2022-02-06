@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 @Controller
 public class aFRQController {
     @GetMapping("/aFRQ3")
-    public String FRQ3(Model model) {
+    public String aFRQ3(Model model) {
         aData data = new aData();
         model.addAttribute("data", data);
         System.out.println(data);
@@ -27,15 +27,15 @@ public class aFRQController {
     }
 
     @GetMapping("/aFRQ6")
-    public String FRQ6(Model model) {
-        aFRQ6p2 fRQ6p2 = new aFRQ6p2();
-        model.addAttribute("fRQ6p2", fRQ6p2);
+    public String aFRQ6(Model model) {
+        aFRQ6p2 aFRQ6p2 = new aFRQ6p2();
+        model.addAttribute("aFRQ6p2", aFRQ6p2);
         return "abhijayFRQ6";
     }
 
     @PostMapping("/aFRQ6")
-    public String submitForm(@ModelAttribute("FRQ6p2") aFRQ6p2 fRQ6p2, Model model) {
-        String result = aFRQ6p2.computeWages(fRQ6p2.getFixedWage(), fRQ6p2.getPerItemWage());
+    public String submitForm(@ModelAttribute("aFRQ6p2") aFRQ6p2 aFRQ6p2, Model model) {
+        String result = aFRQ6p2.computeWages(aFRQ6p2.getFixedWage(), aFRQ6p2.getPerItemWage());
         model.addAttribute("result", result);
         return "abhijayFRQ6result";
     }

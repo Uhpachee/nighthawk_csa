@@ -1,0 +1,74 @@
+public class Invitation {
+
+  private String hostName;
+  private String address;
+  private String invitation;
+
+  public Invitation(String n, String a) {
+    hostName = n;
+    address = a;
+  }
+
+  //part d
+  public Invitation (String a) {
+    address = a;
+    hostName = "Host";
+  }
+
+  //part a
+  public String toString() {
+    return hostName;
+  }
+
+  //part b
+  public void updateAddress(String newAddy) {
+    address = newAddy;
+    System.out.println("The new address is " + address);
+  }
+
+  //part c
+  public String invitePerson(String invitee) {
+    invitation = "Dear " + invitee + ", please attend my event at " + address + ". See you then, " + hostName + ".";
+    return invitation;
+  }
+
+}
+
+import java.util.Random;
+
+public class PasswordGenerator {
+
+  private Random rand = new Random();
+  private int digits;
+  private static int pwCount = 0;
+  private String prefix;
+
+  public PasswordGenerator(int d, String p) {
+    //insert constructor
+    digits = d;
+    prefix = p;
+  }
+
+  public PasswordGenerator(int d) {
+    digits = d;
+    prefix = "A";
+  }
+
+  public String pwGen() {
+    //insert stuff
+    String password = prefix + ".";
+    for (int i = 1; i <= digits; i++) {
+      password += rand.nextInt(10);
+    }
+
+    pwCount += 1;
+    System.out.println("Password Generated: " + password);
+    return password;
+
+  }
+
+  public int pwCount() {
+    System.out.println("Password Count: " + pwCount);
+    return pwCount;
+  }
+}
