@@ -2,16 +2,15 @@ package com.nighthawk.csa.kianfrqs.FRQ9;
 
 public class PictureBook extends Book {
 
-    public PictureBook(String t, String a) {
+    private String illustrator;
+    public PictureBook(String t, String a, String i) {
         super(t, a);
+        illustrator = i;
     }
 
     public void printBookInfo()
     {
-        //System.out.print(Book.t + ", written by " + Book.a);
-    }
-
-    public static void main(String[] args) {
-
+        super.printBookInfo();
+        System.out.println(" and illustrated by" + illustrator);
     }
 }
