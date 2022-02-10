@@ -1,7 +1,7 @@
 package com.nighthawk.csa.kianfrqs;
 import java.util.*;
 public class Wordle {
-    String[] wordBank = {"faint","casts","blast","frick","crack","whiff","spicy","barge","longs","frisk","glint","finds","sword","array","worst","count","plied","drive","trees","syncs","candy","fraud","glock","pound"};
+    String[] wordBank = {"faint","casts","blast","frick","pause","humor","flora","fauna","elect","moron","idiot","phone","flags","coats","state","books","towel","paper","house","crack","whiff","spicy","barge","longs","frisk","glint","finds","sword","array","worst","count","plied","drive","trees","syncs","candy","fraud","glock","pound"};
     public static final String ANSI_GREEN = "\u001B[32m";
     public static final String ANSI_YELLOW = "\u001B[33m";
     public static final String ANSI_RESET = "\u001B[0m";
