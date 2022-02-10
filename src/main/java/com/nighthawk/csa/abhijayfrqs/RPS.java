@@ -14,23 +14,13 @@ public class RPS {
     /* main is just kind of a word that we can use (we can name it anything) but we set it as main to state that it is the starting point */
     /* String[] args is sort of an array type but it can be named anything */
     public static void main(String[] args) {
+
+        int playerpoints = 0;
+        int cpupoints = 0;
+
         // We seperate this function from the rest so we can repeat the game over a few times
         /* We want the user to choose what they want, so we have to use a scanner class to get that input */
         Scanner scanner = new Scanner(System.in);
-
-        // Now we are letting the player first select how many rounds of the game they would like to play
-        System.out.println("How many rounds of Rock-Paper-Scissors would you like to play?");
-        // We are creating an integer and turning the string input recieved and turning it into a integer
-        int rounds = Integer.parseInt(scanner.nextLine());
-
-        // Now we process those numbers given and just keep running through the program until it hits the final number
-        for (int i = 0; i < rounds; i++) {
-            playgame(scanner);
-        }
-
-    }
-
-    static void playgame(Scanner scanner) {
 
         //First we have our regular string that tells the player to choose one of those following options
         System.out.println("Choose Rock, Paper, or Scissors!: ");
@@ -65,11 +55,13 @@ public class RPS {
         // The second conditions calls our function from before to check if the opponent lost or not
         } else if (playerwin(playermove, cpumove)) {
             System.out.print("You Won!");
+            playerpoints++;
         } else {
             System.out.println("You Lost.");
+            cpupoints++;
         }
 
-
+        RPS.main(null);
     }
 
     // Now we are going to be creating the function that checks if the cpu or the player wins
