@@ -5,6 +5,7 @@
     <title>Wordle</title>
 </head>
 <body style="background-color:#292929; color:white; text-align:center;" onLoad="run();">
+<a style="font-size:xxx-large; font-family: 'Copperplate Gothic Bold',monospace;">W O R D L E </a><br><br><br><br>
     <div style="font-size:xxx-large">
         <!--<span th:text="${finalWord}"></span><br>-->
         <div id="final"></div>
@@ -16,9 +17,9 @@
         <span th:style="'color:'+@{${color5}}+''" th:text="${value5}"></span><br>
     </div><br></div>
     <form action="#" th:action="@{/wordle}" method="post" th:object="${pickWord}">
-        <label style="font-size: large;">Input your word!</label><br>
+        <label style="font-size: x-large; font-family: 'Copperplate Gothic Bold',monospace;">Input your word!</label><br>
         <input style="border: 2px solid #545454; border-radius: 15px; background-color: black; color: white;" type="text" maxlength="5" minlength="5" th:field="*{word}" /><br/>
-        <button type="submit">Submit</button></form>
+        <button type="submit" style="font-family: 'Copperplate Gothic Bold',monospace;">Submit</button></form>
         <span th:text="${result}"></span>
         <div id="container"></div>
 <script th:inline="javascript"><!--type="module" src="/static/js/wordle.js" th:src="@{/js/wordle.js}"-->
