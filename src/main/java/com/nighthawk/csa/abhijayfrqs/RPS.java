@@ -8,6 +8,10 @@ import java.util.Random;
 /* This is just the starting class for Rock Paper Scissors - Goes over the entire file */
 public class RPS {
 
+    private String playerchoice;
+    public String getPlayerchoice() { return playerchoice; }
+    public void setPlayerchoice(String newPlayerchoice) { this.playerchoice = newPlayerchoice; }
+
     /* By making this public, we are allowing the entire file to be able to call this */
     /* static makes it a class related method and makes it so that the original can't change or be manipulated */
     /* void makes it so the main() method doesn't return anything */
@@ -15,12 +19,24 @@ public class RPS {
     /* String[] args is sort of an array type but it can be named anything */
     public static void main(String[] args) {
 
-        int playerpoints = 0;
-        int cpupoints = 0;
-
         // We seperate this function from the rest so we can repeat the game over a few times
         /* We want the user to choose what they want, so we have to use a scanner class to get that input */
         Scanner scanner = new Scanner(System.in);
+
+        System.out.println("How many rounds would you like to play?");
+        int rounds = Integer.parseInt(scanner.nextLine());
+
+        for (int i = 0; i < rounds; i++) {
+            playgame(scanner);
+        }
+
+
+    }
+
+    static void playgame(Scanner scanner) {
+
+        int playerpoints = 0;
+        int cpupoints = 0;
 
         //First we have our regular string that tells the player to choose one of those following options
         System.out.println("Choose Rock, Paper, or Scissors!: ");
@@ -60,6 +76,9 @@ public class RPS {
             System.out.println("You Lost.");
             cpupoints++;
         }
+
+        System.out.println("You have " + playerpoints + "points!");
+        System.out.println("The CPU has " + cpupoints + "points!");
 
         RPS.main(null);
     }
