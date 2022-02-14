@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html xmlns:layout="http://www.w3.org/1999/xhtml" xmlns:th="http://www.w3.org/1999/xhtml" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Wordle</title>
+</head>
+<body style="background-color:#292929; color:white; text-align:center;" onLoad="run();">
+<a style="font-size:xxx-large; font-family: 'Copperplate Gothic Bold',monospace;">W O R D L E </a><br><br><br><br>
+    <div style="font-size:xxx-large">
+        <!--<span th:text="${finalWord}"></span><br>-->
+        <div id="final"></div>
+        <div id="colors">
+        <span th:style="'color:'+@{${color1}}+''" th:text="${value1}"></span>
+        <span th:style="'color:'+@{${color2}}+''" th:text="${value2}"></span>
+        <span th:style="'color:'+@{${color3}}+''" th:text="${value3}"></span>
+        <span th:style="'color:'+@{${color4}}+''" th:text="${value4}"></span>
+        <span th:style="'color:'+@{${color5}}+''" th:text="${value5}"></span><br>
+    </div><br></div>
+    <form action="#" th:action="@{/wordle}" method="post" th:object="${pickWord}">
+        <label style="font-size: x-large; font-family: 'Copperplate Gothic Bold',monospace;">Input your word!</label><br>
+        <input id="word" style="border: 2px solid #545454; border-radius: 15px; background-color: black; color: white;" type="text" maxlength="5" minlength="5" th:field="*{word}" /><br/>
+        <button type="submit" style="font-family: 'Copperplate Gothic Bold',monospace;">Submit</button></form>
+        <span th:text="${result}"></span>
+        <div id="container"></div>
+<script th:inline="javascript"><!--type="module" src="/static/js/wordle.js" th:src="@{/js/wordle.js}"-->
+    function run() {
+        document.getElementById('word').value = '';
+        document.getElementById("word").focus();
+        storage = window.localStorage;
+        var div = document.getElementById("final");
+        var result = ([[${result}]]);
+        var annotatedtext = document.getElementById("colors");
+
+        var attempts = Number(storage.getItem('attempts'));
+        ++attempts;
+        console.log("Attempts: " + attempts);
+        storage.setItem("attempts", String(attempts));
+        console.log(storage.getItem("attempts"));
+        storage.setItem(storage.getItem("attempts"), annotatedtext.innerHTML);
+
+
+        //const search = 'null';
+        //const replaceWith = '';
+        //div.innerHTML = JSON.stringify(div).split(search).join(replaceWith);
+        for (let j = 0; j < storage.getItem("attempts"); j++) {
+            console.log(j);
+            var string = String(j);
+            console.log("gotten item");
+            div.innerHTML += storage.getItem(string);
+        }
+
+        if (result === "You won!!!") {
+            let btn = document.createElement("button");
+            btn.innerHTML = "Play again!";
+            btn.onclick = function () {
+                location.href = "/wordlemenu";
+            };
+            let text = document.createTextNode("It took you " + String(attempts) + " attempts to guess the correct word!");
+            document.body.appendChild(text);
+            document.body.appendChild(btn);
+            console.log("clearing storage");
+            storage.clear();
+        }
+    }
+</script>
+</body>
+</html>
