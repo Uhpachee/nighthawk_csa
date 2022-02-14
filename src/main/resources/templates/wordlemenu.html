@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html xmlns:layout="http://www.w3.org/1999/xhtml" xmlns:th="http://www.w3.org/1999/xhtml"
+      layout:decorate="~{layout1}" lang="en">
+<head><div layout:fragment="metadata" th:remove="tag">
+    <meta charset="UTF-8">
+    <title>Wordle Menu</title></div>
+</head>
+<body><div layout:fragment="content" th:remove="tag" onLoad="resetAttempts();" style="background-color:#292929  ">
+    <a>Begin Wordle soon!</a>
+    <form action="#" th:action="@{/wordlemenu}" method="post" th:object="${pickWord}">
+        <label>Single or Multiplayer? (1 or 2)</label>
+        <input id="select" type="number" min="1" max="2" step="1" th:field="*{select}" value="1" /><br/>
+        <label>Input word if multiplayer. (If singleplayer just put whatever)</label>
+        <input type="text" th:field="*{input}" minlength="5" maxlength="5" /><br/>
+        <button type="submit" onclick="resetAttempts();">Submit</button></form>
+
+    <script th:inline="javascript"> <!--type="module" src="/static/js/wordle.js" th:src="@{/js/wordle.js}"-->
+        function resetAttempts() {
+            storage = window.localStorage;
+            console.log("hey")
+            storage.clear();
+            storage.setItem("attempts", "-1");
+        }
+    </script>
+</div></body>
+</html>
