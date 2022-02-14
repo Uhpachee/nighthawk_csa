@@ -57,7 +57,7 @@ public class Sudoku {
                             full[i][j] = set.get(0);
                             run = true;
                         } catch (Exception e) {
-                            System.out.println("Try again!");
+                            //System.out.println("Try again!");
                             for (int a = 0; a < 9; a++) {
                                 full[i][a] = 0;
                             }
@@ -73,9 +73,7 @@ public class Sudoku {
                         }*/
                     }
                 }
-                if (run) {
-                    break;
-                } else if (reset <= 0) {
+                if (reset <= 0) {
                     for (int a = 0; a < 9; a++) {
                         for (int b = 0; b < 9; b++) {
                             full[a][b] = 0;
@@ -83,7 +81,9 @@ public class Sudoku {
                     }
                     reset = 30;
                     run = true;
-                    Sudoku.main(null);
+                    generateSudoku();
+                    break;
+                } else if (run) {
                     break;
                 }
             }
@@ -182,8 +182,68 @@ public class Sudoku {
         return value;
     }
 
+    public void run(/*int row, int column*/) {
+        int[][] starter = new int[9][9];
+        int[][] solution = generateSudoku();
+        for (int i = 0; i < 31; i++) {
+            Random rand = new Random();
+            int r = rand.nextInt(9);
+            int c = rand.nextInt(9);
+            starter[r][c] = solution[r][c];
+        }
+
+        for (int i = 0; i < 9; i++) {
+            for (int j = 0; j < 9; j++) {
+                System.out.printf("%4d", solution[i][j]);
+            }
+            System.out.printf("\n");
+        }
+
+        System.out.println("Start!");
+        for (int i = 0; i < 9; i++) {
+            for (int j = 0; j < 9; j++) {
+                System.out.printf("%4d", starter[i][j]);
+            }
+            System.out.printf("\n");
+        }
+        Scanner scan = new Scanner(System.in);
+        while (true) {
+            System.out.println("Input row (1-9)");
+            int row = scan.nextInt()-1;
+            System.out.println("Input column (1-9)");
+            int column = scan.nextInt()-1;
+            System.out.println("Input number (1-9)");
+            int input = scan.nextInt();
+
+            if (starter[row][column] == 0) {
+                if (input == solution[row][column]) {
+                    starter[row][column] = input;
+                    System.out.println("You got it!");
+                    for (int i = 0; i < 9; i++) {
+                        for (int j = 0; j < 9; j++) {
+                            System.out.printf("%4d", starter[i][j]);
+                        }
+                        System.out.printf("\n");
+                    }
+                } else {
+                    System.out.println("Right answer is: " + solution[row][column] + " but your input is: " + input);
+                }
+            } else {
+                System.out.println("This solution is already filled");
+            }
+            if (starter == solution) {
+                break;
+            }
+
+
+    }
+        System.out.println("You win!");
+    }
+
     public static void main(String[] args) {
         Sudoku c = new Sudoku();
+        c.run();
+        /*
         int[][] print = c.generateSudoku();
             System.out.println("Final Randomly Generated Sudoku Solution: \n");
             for (int i = 0; i < 9; i++) {
@@ -192,6 +252,8 @@ public class Sudoku {
                 }
                 System.out.printf("\n");
             }
+
+         */
     }
 
 
