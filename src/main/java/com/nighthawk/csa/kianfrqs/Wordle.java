@@ -1,11 +1,10 @@
 package com.nighthawk.csa.kianfrqs;
 import java.util.*;
 public class Wordle {
-    String[] wordBank = {"faint","casts","blast","frick","pause","humor","flora","fauna","elect","moron","idiot","phone","flags","coats","state","books","towel","paper","house","crack","whiff","spicy","barge","longs","frisk","glint","finds","sword","array","worst","count","plied","drive","trees","syncs","candy","fraud","glock","pound"};
-    public static final String ANSI_GREEN = "\u001B[32m";
-    public static final String ANSI_YELLOW = "\u001B[33m";
-    public static final String ANSI_RESET = "\u001B[0m";
+    //defining array of possible words
+    String[] wordBank = {"bongs","whine","grips","write","quota","faint","casts","blast","frick","pause","humor","flora","fauna","elect","moron","idiot","phone","flags","coats","state","books","towel","paper","house","crack","whiff","spicy","barge","longs","frisk","glint","finds","sword","array","worst","count","plied","drive","trees","syncs","candy","fraud","glock","pound"};
 
+    //initializers, getters, setters
     private int select;
     private String input;
     private String word;
@@ -16,11 +15,13 @@ public class Wordle {
     public String getWord() { return word; }
     public void setWord(String newWord) { this.word = newWord; }
 
+    //picks random word from word bank
     public String singleplayer() {
         Random rand = new Random();
         return wordBank[rand.nextInt(wordBank.length)];
     }
 
+    //either selects random word or allows input of word
     public String selectWord(int selection, String input) {
         String wordRight;
         if (selection == 1) {
@@ -38,28 +39,40 @@ public class Wordle {
         return wordRight;
     }
 
+    //main game function
     public String[][] game(String word, String wordRight) {
+        //initializing variables and arrays
         String[] string = new String[5];
         String[] color = {"#ffffff","#ffffff","#ffffff","#ffffff","#ffffff"};
+        //creates 2d array with 2 rows and 5 columns
         String[][] data = new String[2][5];
         String finalString = "";
+        //converts inputted string into char array
         for (int i = 0; i < word.length(); i++) {
             string[i] = String.valueOf(word.charAt(i));
         }
-        boolean win = false;
-        if (word.length() < 6) {
-            for (int i = 0; i < word.length(); i++) {
-                char check = word.charAt(i);
 
+        //main algorithm
+        if (word.length() < 6) {
+            //loops through inputted word for each char
+            for (int i = 0; i < word.length(); i++) {
+                //stores current character in variable
+                char check = word.charAt(i);
+                //loops through right word
                 for (int j = 0; j < wordRight.length(); j++) {
+                        //checks if the characters match and if they're in the same place in the word
                         if (i == j && check == wordRight.charAt(j)) {
+                            //sets the corresponding color to green
                             color[i] = "#46e856";
                            break;
+                           //checks if characters match
                         } else if (check == wordRight.charAt(j)) {
+                            //sets corresponding color to yellow
                             color[i] = "#ebd249";
                         }
                 }
             }
+            //inputs string and color arrays into the 2d array
             for (int i = 0; i < 5; i++) {
                 data[0][i] = string[i];
                 data[1][i] = color[i];
@@ -68,41 +81,8 @@ public class Wordle {
                 finalString += c;
             }
             System.out.println(finalString);
-            if (word.equals(wordRight)) {
-                System.out.println("You win!!!");
-                win = true;
-            }
         }
+        //returns 2d array
         return data;
     }
-
-    /*public String run(String input, String right) {
-        Scanner scan = new Scanner(System.in);
-        String input = scan.next();
-        return game(input,right);
-    }*/
-
-    /*public static void main(String[] args) {
-        Wordle c = new Wordle();
-        Scanner scan = new Scanner(System.in);
-        System.out.println("Single or multiplayer? (1 or 2)");
-        int select = scan.nextInt();
-        System.out.println("Input word if multiplayer. (If singleplayer just put whatever)");
-        String input2 = scan.next();
-        String right = c.selectWord(select,input2);
-        System.out.println("Guess: ");
-        for (int k = 0; k < 7; k++) {
-            if (c.game(input2,right).equals("words")) {
-                System.out.println("Do you want to play again? (yes/no)");
-                String choice = scan.next();
-                if (choice.equals("yes")) {
-                    main(null);
-                } else {
-                    System.out.println("Oh, ok. Bye.");
-                    System.exit(0);
-                }
-            }
-        }
-        System.out.println("You lost :( No more wordle for you!");
-    }*/
 }
