@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html xmlns:layout="http://www.w3.org/1999/xhtml" xmlns:th="http://www.w3.org/1999/xhtml" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sudoku</title>
+</head>
+<body style="background-color:#292929; color:white; text-align:center;" onLoad="run();">
+<a style="font-size:xxx-large; font-family: 'Copperplate Gothic Bold',monospace;">S U D O K U</a><br><br><br><br>
+<form  id="board" method="post" style="align-content:center; margin-left:auto; margin-right:auto; text-align:center;">
+    <table class="table table-dark" style="align-content:center; margin-left:auto; margin-right:auto; text-align:center;">
+        <tr th:each="row: ${board}">
+            <td th:each="value: ${row}">
+                <div th:switch="${value}">
+                    <label>
+                        <input th:case="0" style="width:30px;height:30px;text-align:center" type = "text" maxlength="1" value="0">
+                    </label>
+                    <label>
+                        <input th:case="*" style="width:30px;height:30px;text-align:center;background-color:lightgreen" type = "text" th:value="${value}" readonly>
+                    </label>
+                </div>
+            </td>
+        </tr>
+    </table><br>
+    <input type="submit" value="Check Solution">
+</form>
+<span th:text="${result}"></span>
+<script th:inline="javascript">
+    function run() {
+    var result = ([[${result}]]);
+    if (result === "You win!") {
+        let btn = document.createElement("button");
+        btn.innerHTML = "Play again!";
+        btn.onclick = function () {
+            location.href = "/sudoku";
+        };
+        document.body.appendChild(btn);
+    }}
+</script>
+</body>
+</html>

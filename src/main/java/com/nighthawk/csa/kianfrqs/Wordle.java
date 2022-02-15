@@ -85,34 +85,4 @@ public class Wordle {
         //returns 2d array
         return data;
     }
-
-    /*public String run(String input, String right) {
-        Scanner scan = new Scanner(System.in);
-        String input = scan.next();
-        return game(input,right);
-    }*/
-
-    /*public static void main(String[] args) {
-        Wordle c = new Wordle();
-        Scanner scan = new Scanner(System.in);
-        System.out.println("Single or multiplayer? (1 or 2)");
-        int select = scan.nextInt();
-        System.out.println("Input word if multiplayer. (If singleplayer just put whatever)");
-        String input2 = scan.next();
-        String right = c.selectWord(select,input2);
-        System.out.println("Guess: ");
-        for (int k = 0; k < 7; k++) {
-            if (c.game(input2,right).equals("words")) {
-                System.out.println("Do you want to play again? (yes/no)");
-                String choice = scan.next();
-                if (choice.equals("yes")) {
-                    main(null);
-                } else {
-                    System.out.println("Oh, ok. Bye.");
-                    System.exit(0);
-                }
-            }
-        }
-        System.out.println("You lost :( No more wordle for you!");
-    }*/
 }

@@ -2,51 +2,25 @@ package com.nighthawk.csa.kianfrqs;
 import java.util.*;
 
 public class Sudoku {
+    //initializing variables
     static int[][] full = new int[9][9];
     ArrayList<Integer> numbers = new ArrayList<Integer>(Arrays.asList(1, 2, 3, 4, 5, 6, 7, 8, 9));
     static boolean run = false;
     ArrayList<Integer> setNumbs = new ArrayList<>();
     ArrayList<Integer> temp = new ArrayList<>();
     ArrayList<Integer> exclude = new ArrayList<>(Arrays.asList(0,0));
-    //figure out how to add the  number back into the array after it gets deleted by box checking or by column checking
+
+    //method to randomly generate a sudoku solution
     public int[][] generateSudoku() {
+        //initializing more variables
         int reset = 30;
         ArrayList<Integer> setNums = numbers;
         Collections.shuffle(setNums);
-        /*
-        int num = 0;
-        //set top left, middle, and bottom right boxes
-        for (int i = 0; i < 3; i++) {
-            for (int j = 0; j < 3; j++) {
-                full[i][j] = setNums.get(num);
-                num++;
-            }
-        }
-        num = 0;
-        Collections.shuffle(setNums);
-        for (int i = 3; i < 6; i++) {
-            for (int j = 3; j < 6; j++) {
-                full[i][j] = setNums.get(num);
-                num++;
-            }
-        }
-        num = 0;
-        Collections.shuffle(setNums);
-        for (int i = 6; i < 9; i++) {
-            for (int j = 6; j < 9; j++) {
-                full[i][j] = setNums.get(num);
-                num++;
-            }
-        }
-        */
-
         for (int i = 0; i < 9; i++) {
             while(true) {
                 reset--;
-                //System.out.println("Reset in: " + reset);
                 setNumbs.clear();
                 setNumbs.addAll(shuffleList());
-                //System.out.println("setnumbs" + setNumbs);
                 for (int j = 0; j < 9; j++) {
                     if (full[i][j] == 0) {
                         exclude.clear();
@@ -57,20 +31,11 @@ public class Sudoku {
                             full[i][j] = set.get(0);
                             run = true;
                         } catch (Exception e) {
-                            //System.out.println("Try again!");
                             for (int a = 0; a < 9; a++) {
                                 full[i][a] = 0;
                             }
                             i = 0;
                         }
-                        /*
-                        for (int k = 0; k < 9; k++) {
-                            for (int l = 0; l < 9; l++) {
-                                System.out.printf("%4d", full[k][l]);
-                            }
-                            System.out.printf("\n");
-
-                        }*/
                     }
                 }
                 if (reset <= 0) {
@@ -98,7 +63,6 @@ public class Sudoku {
     }
 
     public ArrayList<Integer> checkConditions(int i, int j, ArrayList<Integer> setNums) {
-        //System.out.println("start check");
         ArrayList<Integer> setNum = new ArrayList<Integer>(Arrays.asList(0,0,0,0,0));
         for (int k = 0; k < 9; k++) {
             if(full[i][k] != 0) {
@@ -135,7 +99,6 @@ public class Sudoku {
                 exclude.addAll(checkBox(6,9,6,9));
             }
         }
-        //System.out.println("exclude" + exclude);
           for (int l : setNums) {
             boolean match = false;
             for (Integer c : exclude) {
@@ -164,7 +127,6 @@ public class Sudoku {
         }
 
         setNum.clear();
-        //System.out.println("numbers " + setNums);
         exclude.clear();
         run = true;
         return setNums;
@@ -182,14 +144,37 @@ public class Sudoku {
         return value;
     }
 
-    public void run(/*int row, int column*/) {
+    //frontend run
+    public int[][] generateStarter() {
         int[][] starter = new int[9][9];
         int[][] solution = generateSudoku();
-        for (int i = 0; i < 31; i++) {
+        for (int i = 0; i < 41; i++) {
             Random rand = new Random();
             int r = rand.nextInt(9);
             int c = rand.nextInt(9);
             starter[r][c] = solution[r][c];
+        }
+        for (int i = 0; i < 9; i++) {
+            for (int j = 0; j < 9; j++) {
+                System.out.printf("%4d", solution[i][j]);
+            }
+            System.out.printf("\n");
+        }
+        return starter;
+    }
+
+    public int[][] getSolution() { return full; }
+
+    //terminal run
+    public void run(/*int row, int column*/) {
+        int[][] starter = new int[9][9];
+        int[][] solution = generateSudoku();
+        for (int i = 0; i < 41; i++) {
+            Random rand = new Random();
+            int r = rand.nextInt(9);
+            int c = rand.nextInt(9);
+            starter[r][c] = solution[r][c];
+
         }
 
         for (int i = 0; i < 9; i++) {
@@ -243,17 +228,6 @@ public class Sudoku {
     public static void main(String[] args) {
         Sudoku c = new Sudoku();
         c.run();
-        /*
-        int[][] print = c.generateSudoku();
-            System.out.println("Final Randomly Generated Sudoku Solution: \n");
-            for (int i = 0; i < 9; i++) {
-                for (int j = 0; j < 9; j++) {
-                    System.out.printf("%4d", print[i][j]);
-                }
-                System.out.printf("\n");
-            }
-
-         */
     }
 
 
