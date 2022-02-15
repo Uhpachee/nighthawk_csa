@@ -12,6 +12,8 @@ public class RPS {
     public String getPlayerchoice() { return playerchoice; }
     public void setPlayerchoice(String newPlayerchoice) { this.playerchoice = newPlayerchoice; }
 
+
+
     /* By making this public, we are allowing the entire file to be able to call this */
     /* static makes it a class related method and makes it so that the original can't change or be manipulated */
     /* void makes it so the main() method doesn't return anything */
