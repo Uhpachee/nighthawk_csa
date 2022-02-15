@@ -144,14 +144,37 @@ public class Sudoku {
         return value;
     }
 
-    public void run(/*int row, int column*/) {
+    //frontend run
+    public int[][] generateStarter() {
         int[][] starter = new int[9][9];
         int[][] solution = generateSudoku();
-        for (int i = 0; i < 31; i++) {
+        for (int i = 0; i < 41; i++) {
             Random rand = new Random();
             int r = rand.nextInt(9);
             int c = rand.nextInt(9);
             starter[r][c] = solution[r][c];
+        }
+        for (int i = 0; i < 9; i++) {
+            for (int j = 0; j < 9; j++) {
+                System.out.printf("%4d", solution[i][j]);
+            }
+            System.out.printf("\n");
+        }
+        return starter;
+    }
+
+    public int[][] getSolution() { return full; }
+
+    //terminal run
+    public void run(/*int row, int column*/) {
+        int[][] starter = new int[9][9];
+        int[][] solution = generateSudoku();
+        for (int i = 0; i < 41; i++) {
+            Random rand = new Random();
+            int r = rand.nextInt(9);
+            int c = rand.nextInt(9);
+            starter[r][c] = solution[r][c];
+
         }
 
         for (int i = 0; i < 9; i++) {
