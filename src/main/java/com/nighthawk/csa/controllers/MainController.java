@@ -44,7 +44,6 @@ public class MainController {
     @GetMapping("/games")
     public String games() { return "games"; }
 
-
     @GetMapping("/spotify")
     public String spotify() { return "spotify"; }
 
