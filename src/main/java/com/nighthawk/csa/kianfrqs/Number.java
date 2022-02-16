@@ -35,7 +35,6 @@ import java.util.Random;
                 squirrel.setIndex(i);
             }
             while (!finish) {
-
                 for (int i = 0; i < 10; i++) {
                     if (i != 0 && squirrels.get(i).getRandom() < squirrels.get(i - 1).getRandom()) {
                         //System.out.println("Swapping" + squirrels.get(i).getRandom() + " with " + squirrels.get(i-1).getRandom());
