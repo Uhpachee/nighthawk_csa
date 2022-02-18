@@ -3,6 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <title>Sudoku</title>
+    <style>
+        input::-webkit-outer-spin-button,
+    input::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+    }
+
+    input[type=number] {
+        -moz-appearance: textfield;
+    }</style>
 </head>
 <body style="background-color:#292929; color:white; text-align:center;" onLoad="run();">
 <a style="font-size:xxx-large; font-family: 'Copperplate Gothic Bold',monospace;">S U D O K U</a><br><br><br><br>
@@ -12,7 +22,7 @@
             <td th:each="value: ${row}">
                 <div th:switch="${value}">
                     <label>
-                        <input th:case="0" style="width:30px;height:30px;text-align:center" type = "text" maxlength="1" value="0">
+                        <input th:case="0" style="width:30px;height:30px;text-align:center" type = "number" max="9" min="1" value="">
                     </label>
                     <label>
                         <input th:case="*" style="width:30px;height:30px;text-align:center;background-color:lightgreen" type = "text" th:value="${value}" readonly>
