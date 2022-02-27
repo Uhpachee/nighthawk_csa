@@ -1,15 +1,15 @@
 package JustinFRQs;
+import java.util.ArrayList;
 import java.util.Random;
 
 public class CoinGame {
 
-    private int startingCoins; // starting number of coins
-    private int maxRounds; // maximum number of rounds played
-    private int p1Input;
-    private int p1Coins;
-    private int p2Coins;
-    private boolean earlyEnd = false;
-    private int round = 0;
+    private static int startingCoins = 20; // starting number of coins
+    private static int maxRounds = 5; // maximum number of rounds played
+    private static int p1Input;
+    private static int p1Coins;
+    private static int p2Coins;
+    private static int round = 0;
 
     public int getStartingCoins() {return startingCoins;}
     public void setStartingCoins(int newStart) { this.startingCoins = newStart; }
@@ -22,12 +22,13 @@ public class CoinGame {
     public int getP2Coins() {return p2Coins;}
     public void setP2Coins(int newCoins) { this.p2Coins = newCoins; }
 
-    public CoinGame(int maxRounds, int startingCoins) {
+    /**public CoinGame(int maxRounds, int startingCoins) {
         this.maxRounds = maxRounds;
         this.startingCoins = startingCoins;
         this.p1Coins = startingCoins;
         this.p2Coins = startingCoins;
-    }
+    }*/
+
     /** Returns the number of coins (1, 2, or 3) that player 2 will spend.
      */
     public int getP2Input() {
@@ -39,8 +40,9 @@ public class CoinGame {
     /** Plays a simulated game between two players, as described in part (b).
      */
     //part b
-    public void playRound(int p1Input) {
+    public ArrayList<Integer> playRound(int p1Input) {
         //new round
+        ArrayList<Integer> data = new ArrayList<>();
         round += 1;
         System.out.println("Round: " + this.round);
 
@@ -66,16 +68,24 @@ public class CoinGame {
             System.out.println("P1 gains: 2");
         }
 
+
         System.out.println("P1 Coins: " + this.p1Coins);
         System.out.println("P2 Coins: " + this.p2Coins);
         System.out.println("End of round " + this.round);
+        data.add(p1spend);
+        data.add(p2spend);
+        data.add(p1Coins);
+        data.add(p2Coins);
+        data.add(round);
 
+        return data;
     }
 
-    public static void main(String[] args) {
+    /**public static void main(String[] args) {
         CoinGame game1 = new CoinGame(5, 10);
         game1.playRound(2);
+        game1.playRound(3);
 
-    }
+    }*/
 }
 
