@@ -44,6 +44,12 @@ public class ABController {
     // CONTROLLER handles GET request for /greeting, maps it to greeting() and does variable bindings
     public String playgame() {
         return "playgame"; }
+
+    @GetMapping("/ghibliapi")
+    // CONTROLLER handles GET request for /greeting, maps it to greeting() and does variable bindings
+    public String ghibliapi() {
+        return "ghibliapi"; }
+
     @GetMapping("/coingame")
     public String coingame() { return "coingame"; }
 }
