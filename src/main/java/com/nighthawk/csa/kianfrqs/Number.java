@@ -2,6 +2,7 @@ package com.nighthawk.csa.kianfrqs;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Random;
+
     // Write a Class Number
     public class Number {
         // instance variables

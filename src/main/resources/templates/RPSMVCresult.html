@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html xmlns:layout="http://www.w3.org/1999/xhtml" xmlns:th="http://www.w3.org/1999/xhtml"
+      layout:decorate="~{layout1}" lang="en">
+<head><div layout:fragment="metadata" th:remove="tag">
+    <title>Rock Paper Scissors Result</title></div>
+</head>
+
+<body><div layout:fragment="content" th:remove="tag">
+    <div style="display: flex;
+        flex-direction: column;
+justify-content: center">
+        <h1 style="font-size:75px;
+        color: White;
+        font-weight: bold;
+        margin:auto;
+        margin-top: 20px;
+        ">Rock Paper Scissors</h1>
+        <p style="
+    font-size: x-large;
+        border-radius: 10px;
+        color: #555555;
+        background-color: #eeeeee;
+        border: #dddddd 2px solid;
+       margin: 40px 200px;
+       text-align: center;
+       padding: 50px 25px;
+"><span>Dinner Party Info: </span><br><br>
+            <span th:text="${result}"></span></p>
+    </div></div>
+</body>
+</html>

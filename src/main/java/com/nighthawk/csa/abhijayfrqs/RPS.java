@@ -7,13 +7,6 @@ import java.util.Random;
 
 /* This is just the starting class for Rock Paper Scissors - Goes over the entire file */
 public class RPS {
-
-    private String playerchoice;
-    public String getPlayerchoice() { return playerchoice; }
-    public void setPlayerchoice(String newPlayerchoice) { this.playerchoice = newPlayerchoice; }
-
-
-
     /* By making this public, we are allowing the entire file to be able to call this */
     /* static makes it a class related method and makes it so that the original can't change or be manipulated */
     /* void makes it so the main() method doesn't return anything */
