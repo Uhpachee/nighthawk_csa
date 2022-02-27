@@ -6,22 +6,42 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 
+import java.util.Scanner;
+
 public class RPSController {
 
     @GetMapping("/RPS")
     public String RPS(Model model) {
-        Data data = new Data();
+        RPS data = new RPS();
         model.addAttribute("data", data);
-        System.out.println(data);
         return "RPS";
     }
 
     @PostMapping("/RPS")
-    public String submitForm(@ModelAttribute("data") Data data, Model model) {
+    public String submitForm(@ModelAttribute("data") RPS data, Model model) {
         System.out.println(data);
-        String result = Data.run(data.getRsvp1(), data.getRsvp2(), data.getSelection1(), data.getSelection2());
+        //0 = rock, 1 = paper, 2 = scissors
+        int cpu = data.playGame();
+        int input = data.getInput();
+        String result;
+        if (cpu == 0 && input == 1) {
+            result = "CPU chose rock, you chose paper. You win!";
+        } else if (cpu == 0 && input == 2) {
+            result = "CPU chose rock, you chose scissors. You lose!";
+        } else if (cpu == 1 && input == 0) {
+            result = "CPU chose paper, you chose rock. You lose!";
+        } else if (cpu == 1 && input == 2) {
+            result = "CPU chose paper, you chose scissors. You win!";
+        } else if (cpu == 2 && input == 0) {
+            result = "CPU chose scissors, you chose rock. You win!";
+        } else if (cpu == 2 && input == 1) {
+            result = "CPU chose scissors, you chose paper. You lose!";
+        } else {
+            result = "You tied!";
+        }
+
         model.addAttribute("result", result);
-        return "RPSResult";
+        return "RPS";
     }
 
 }
