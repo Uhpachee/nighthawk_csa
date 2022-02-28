@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 
 @Controller
 public class SudokuController {
-    static int[][] board;
+    int[][] board;
     @GetMapping("/sudoku")
     public String sudoku(Model model) {
         Sudoku solution = new Sudoku();
