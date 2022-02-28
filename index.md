@@ -3,6 +3,7 @@ This is the project of the one and only p2-slackbots and our project is called C
 
 Main idea: Our website is the go-to place for gamers. All kinds of stuff relating to gaming, we got it! We implement information pages for gamers (or non-gamers) to look at to learn, and we also have real games for users to play. Come to this website for real time information, games you can play directly on the website, and redirection to real games. Have fun!
 The games will be pulled in from an API, as well as personally customed by us.
+Since our project is about games, every part of our project has games incorporated in it. We have multiple pages relating to games, including some that simply display games, and some where you, the user, can actually play the game. Even our home and about us pages are related to games, where backgrounds and icons relate to games. Overall, our entire project can be considered as a game. As a team of young men, who all love to play videogames all day long, we embraced this project since it fit with our hobbies and interests in life. Not only does this project represent our computer science skills, but it represents us, as people, as video gamers.
 
 Group members: [Justin](https://github.com/jli615), [Rohan](https://github.com/RohanKoshy), [Shekar](https://github.com/shekark642), [Abhijay](https://github.com/Dubshott), [Kian](https://github.com/Uhpachee)
 
