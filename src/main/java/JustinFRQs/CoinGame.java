@@ -7,8 +7,8 @@ public class CoinGame {
     private static int startingCoins = 20; // starting number of coins
     private static int maxRounds = 5; // maximum number of rounds played
     private static int p1Input;
-    private static int p1Coins;
-    private static int p2Coins;
+    private static int p1Coins = 20;
+    private static int p2Coins = 20;
     private static int round = 0;
 
     public int getStartingCoins() {return startingCoins;}

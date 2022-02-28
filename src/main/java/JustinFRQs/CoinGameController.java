@@ -1,5 +1,4 @@
 package JustinFRQs;
-import com.nighthawk.csa.kianfrqs.Wordle;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.stereotype.Controller;
@@ -12,9 +11,10 @@ import java.util.ArrayList;
 @Controller
 public class CoinGameController {
 
+
     @GetMapping("/coingame")
 
-    public String coingame(@RequestParam(name="p1coins", required=false,  defaultValue="2") int p1coins, Model model) {
+    public String coingame(Model model) {
 
         CoinGame game = new CoinGame();
 
