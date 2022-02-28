@@ -9,6 +9,19 @@ Group members: [Justin](https://github.com/jli615), [Rohan](https://github.com/R
 Group members' replit profiles: [Justin](https://replit.com/@JustinLi38) [Shekar](https://replit.com/@shekark642) 
 
 
+## PBL Theme
+Our PBL project is based off a video game arcade. We wanted to create a website that was really delicious so that it could capture the essence of an arcade and make it a hub where people can play online games and learn about new games. 
+
+Our main features include our games page which goes over multiple games and show our rankings for best and worst games. This match our PBL theme because it continues the theme of an arcade and goes over the games that we like. 
+
+![Games](https://ibb.co/cXJN7ts)
+
+We also included 2 of our favorite games ever so that people can actually play the games and not just sit in our website looking at a ranking. The 2 games that we created to make people have fun was wordle and sudoku. These match up to our pbl feature because it follows the gaming theme and the arcade theme so that people can have a fun gaming experience. 
+
+Here is our picture of Wordle: ![Worlde](https://ibb.co/8rTBD6L)
+
+Here is our picture of sudoku: ![Sudoku](https://ibb.co/vBG12KM)
+
 ## Deployment Protocol
 
 Our website is deployed at: https://coolermathgames.ml
