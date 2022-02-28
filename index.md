@@ -8,6 +8,16 @@ Group members: [Justin](https://github.com/jli615), [Rohan](https://github.com/R
 
 Group members' replit profiles: [Justin](https://replit.com/@JustinLi38) [Shekar](https://replit.com/@shekark642) 
 
+
+## Deployment Protocol
+
+Our website is deployed at: https://coolermathgames.ml
+We used an AWS instance and used certbot to make the website an https website
+Our deployment guide is here: https://github.com/shekark642/slackbots-p2/wiki/Deployment-Guide
+Our deployment nginx config is here: https://github.com/shekark642/slackbots-p2/wiki/Deployment-Nginx-Config
+Our deployment service config is here: https://github.com/shekark642/slackbots-p2/wiki/Deployment-Service-Config
+
+
 ## Week 5
 
 Review Ticket w/ Tangibles: https://github.com/shekark642/M222-Slackbotss/issues/17
