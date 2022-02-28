@@ -16,7 +16,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 @Controller
 public class FRQController {
     @GetMapping("/FRQ3")
-    public String FRQ3(Model model) {
+    public String FRQ3(Model model) { 
         Data data = new Data();
         model.addAttribute("data", data);
         System.out.println(data);
