@@ -43,6 +43,13 @@ Our deployment guide is here: https://github.com/shekark642/slackbots-p2/wiki/De
 Our deployment nginx config is here: https://github.com/shekark642/slackbots-p2/wiki/Deployment-Nginx-Config
 Our deployment service config is here: https://github.com/shekark642/slackbots-p2/wiki/Deployment-Service-Config
 
+## Javascript Fetch
+
+![image](https://user-images.githubusercontent.com/72948731/156034733-d29162bd-fd87-4ad9-9ed8-5a908bda6ba3.png)
+Javascript fetch gets these games from a book/game API I found online. It uses the link and the GET method to get information about these books to display on the HTML without hard coding it in, and it updates automatically
+![image](https://user-images.githubusercontent.com/72948731/156035080-f7517182-1204-49bb-a6a1-8e8c58382700.png)
+
+
 
 ## Week 5
 
