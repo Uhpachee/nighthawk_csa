@@ -3,7 +3,6 @@ This is the project of the one and only p2-slackbots and our project is called C
 
 Main idea: Our website is the go-to place for gamers. All kinds of stuff relating to gaming, we got it! We implement information pages for gamers (or non-gamers) to look at to learn, and we also have real games for users to play. Come to this website for real time information, games you can play directly on the website, and redirection to real games. Have fun!
 The games will be pulled in from an API, as well as personally customed by us.
-Since our project is about games, every part of our project has games incorporated in it. We have multiple pages relating to games, including some that simply display games, and some where you, the user, can actually play the game. Even our home and about us pages are related to games, where backgrounds and icons relate to games. Overall, our entire project can be considered as a game. As a team of young men, who all love to play videogames all day long, we embraced this project since it fit with our hobbies and interests in life. Not only does this project represent our computer science skills, but it represents us, as people, as video gamers.
 
 Group members: [Justin](https://github.com/jli615), [Rohan](https://github.com/RohanKoshy), [Shekar](https://github.com/shekark642), [Abhijay](https://github.com/Dubshott), [Kian](https://github.com/Uhpachee)
 
@@ -15,13 +14,13 @@ Our PBL project is based off a video game arcade. We wanted to create a website 
 
 Our main features include our games page which goes over multiple games and show our rankings for best and worst games. This match our PBL theme because it continues the theme of an arcade and goes over the games that we like. 
 
-![Games](https://ibb.co/cXJN7ts)
+![Games](https://github.com/shekark642/slackbots-p2/blob/master/src/main/resources/static/images/Games.jpg)
 
 We also included 2 of our favorite games ever so that people can actually play the games and not just sit in our website looking at a ranking. The 2 games that we created to make people have fun was wordle and sudoku. These match up to our pbl feature because it follows the gaming theme and the arcade theme so that people can have a fun gaming experience. 
 
-Here is our picture of Wordle: ![Worlde](https://ibb.co/8rTBD6L)
+Here is our picture of Wordle: ![Worlde](https://github.com/shekark642/slackbots-p2/blob/master/src/main/resources/static/images/Sudoku.jpg)
 
-Here is our picture of sudoku: ![Sudoku](https://ibb.co/vBG12KM)
+Here is our picture of sudoku: ![Sudoku](https://github.com/shekark642/slackbots-p2/blob/master/src/main/resources/static/images/Wordle.jpg)
 
 ## Deployment Protocol
 
