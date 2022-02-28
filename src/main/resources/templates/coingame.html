@@ -28,17 +28,17 @@
             <form th:action="@{/coingame}" method="POST" th:object="${game}">
                 <hr>
                 <section class="input">
-                    <label>How many coins would you like to bet?</label>
+                    <label>How many coins would you like to spend?</label>
                     <input type="number" min="1" max="3" th:field="*{p1Input}">
                     <button type="submit">Submit</button>
                 </section>
                 <hr>
             </form>
+            <h4>P1 Spends:</h4>
+            <span th:text="${p1spend}" id="output"></span>
         </div>
         <div class="column">
             <h3>Results:</h3>
-            <h4>P1 Spends:</h4>
-            <span th:text="${p1spend}" id="output"></span>
             <h4>P1 Coins:</h4>
             <span th:text="${p1Coins}" id="output"></span>
             <h4>P2 Coins:</h4>
@@ -47,7 +47,7 @@
         <div class="column">
             <h3>Player 2</h3>
             <hr>
-            <h4>Player 2 will be betting</h4>
+            <h4>Player 2 will be spending</h4>
             <span th:text="${p2spend}" id="output"></span>
             <h4> coins</h4>
             <hr>
