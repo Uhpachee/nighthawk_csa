@@ -3,12 +3,13 @@
       layout:decorate="~{layout1}" lang="en">
 <head><div layout:fragment="metadata" th:remove="tag">
     <meta charset="UTF-8">
-    <title>Rock Paper Scissors Game</title></div>
+    <title>Rock Paper Scissors</title></div>
 </head>
 <body><div layout:fragment="content" th:remove="tag">
     <form action="#" th:action="@{/RPS}" method="post" th:object="${data}">
-        <label>Player Move</label>
-        <input type="number" th:field="*{playermove}" /><br/>
+        <label>Rocok, Paper, or Scissors! (case sensitive)</label>
+        <input type="String" th:field="*{input}" /><br/>
         <button type="submit">Submit</button></form>
 </div>
 </body>
+</html>
