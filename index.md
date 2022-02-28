@@ -18,9 +18,12 @@ Our main features include our games page which goes over multiple games and show
 
 We also included 2 of our favorite games ever so that people can actually play the games and not just sit in our website looking at a ranking. The 2 games that we created to make people have fun was wordle and sudoku. These match up to our pbl feature because it follows the gaming theme and the arcade theme so that people can have a fun gaming experience. 
 
-Here is our picture of Wordle: ![Worlde](https://github.com/shekark642/slackbots-p2/blob/master/src/main/resources/static/images/Sudoku.jpg)
+Here is our picture of Sudoku: 
 
-Here is our picture of sudoku: ![Sudoku](https://github.com/shekark642/slackbots-p2/blob/master/src/main/resources/static/images/Wordle.jpg)
+![Sudoku](https://github.com/shekark642/slackbots-p2/blob/master/src/main/resources/static/images/Sudoku.jpg)
+
+Here is our picture of Wordle: 
+![Wordle](https://github.com/shekark642/slackbots-p2/blob/master/src/main/resources/static/images/Wordle.jpg)
 
 ## Deployment Protocol
 
