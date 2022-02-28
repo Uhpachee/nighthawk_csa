@@ -5,11 +5,76 @@
     <meta charset="UTF-8">
     <title>Rock Paper Scissors</title></div>
 </head>
-<body><div layout:fragment="content" th:remove="tag">
-    <form action="#" th:action="@{/RPS}" method="post" th:object="${data}">
-        <label>Rocok, Paper, or Scissors! (case sensitive)</label>
-        <input type="String" th:field="*{input}" /><br/>
-        <button type="submit">Submit</button></form>
-</div>
+<body style="text-align:center;left:auto;right:auto;padding-top:100px;">
+<script th:inline="javascript">
+
+    function run() {
+
+        var input = document.getElementById("input");
+        var cpu = document.getElementById("cpu");
+
+        console.log(input);
+        if (input == 0) {
+            var rock = new Image();
+            rock.src =
+                'https://i.kym-cdn.com/entries/icons/original/000/037/848/cover2.jpg';
+            document.getElementById('body').appendChild(rock);
+        } else if (input == 1) {
+            var paper = new Image();
+            paper.src =
+                'https://newsroom.domtar.com/wp-content/uploads/2017/05/paper.jpg';
+            document.getElementById('body').appendChild(paper);
+        } else {
+            var scissor = new Image();
+            scissor.src =
+                'https://m.media-amazon.com/images/I/61HoRFWVBEL._AC_SS450_.jpg';
+            document.getElementById('body').appendChild(scissor);
+        }
+
+        console.log(cpu);
+        if (cpu == 0) {
+            var rockc = new Image();
+            rockc.src =
+                'https://i.kym-cdn.com/entries/icons/original/000/037/848/cover2.jpg';
+            document.getElementById('body').appendChild(rockc);
+        } else if (cpu == 1) {
+            var paperc = new Image();
+            paperc.src =
+                'https://newsroom.domtar.com/wp-content/uploads/2017/05/paper.jpg';
+            document.getElementById('body').appendChild(paperc);
+        } else {
+            var scissorc = new Image();
+            scissorc.src =
+                'https://m.media-amazon.com/images/I/61HoRFWVBEL._AC_SS450_.jpg';
+            document.getElementById('body').appendChild(scissorc);
+        }
+    }
+
+</script>
+
+    <div layout:fragment="content" th:remove="tag">
+        <form action="#" th:action="@{/RPS}" method="post" th:object="${data}">
+            <label>rock (0), paper (1), or scissors (2)! (type in the corresponding number!)</label>
+            <input type="number" th:field="*{input}" /><br/>
+            <button type="submit" onclick="run()">Submit</button>
+           </form>
+
+        <span th:text="${result}"></span>
+        <span id="cpu" th:text="${cpu}">0</span>
+        <span id="input" th:text="${input}">0</span>
+
+
+    </div>
+
+<script th:inline="javascript">
+    function placescissor() {
+        var scissora = new Image();
+        scissora.src =
+            'https://m.media-amazon.com/images/I/61HoRFWVBEL._AC_SS450_.jpg';
+        document.getElementById('body').appendChild(scissora);
+    }
+</script>
+
+
 </body>
 </html>

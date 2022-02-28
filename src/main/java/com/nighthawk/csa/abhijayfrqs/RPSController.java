@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 
 import java.util.Scanner;
-
+@Controller
 public class RPSController {
 
     @GetMapping("/RPS")
@@ -40,6 +40,8 @@ public class RPSController {
             result = "You tied!";
         }
 
+        model.addAttribute("cpu", cpu);
+        model.addAttribute("input", input);
         model.addAttribute("result", result);
         return "RPS";
     }
