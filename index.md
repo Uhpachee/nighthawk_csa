@@ -30,9 +30,9 @@ Here is our picture of Wordle:
 
 We used a lot of bootstrap throughout our project, but the most important one definitely has to be in our fragments through our header and our navigation bar. We have this bootstrap in literally EVERY SINGLE HTML file, which explains how important this bootstrap really is. Here are some code snippets from the navgiation bar as well as the navigation bar on the main website. 
 
-![Code]()
+![Code](https://github.com/shekark642/slackbots-p2/blob/master/src/main/resources/static/images/Code.jpg)
 
-![Website]()
+![Website](https://github.com/shekark642/slackbots-p2/blob/master/src/main/resources/static/images/Nav.jpg)
 
 ## Deployment Protocol
 
