@@ -23,6 +23,7 @@ Here is our picture of Sudoku:
 ![Sudoku](https://github.com/shekark642/slackbots-p2/blob/master/src/main/resources/static/images/Sudoku.jpg)
 
 Here is our picture of Wordle: 
+
 ![Wordle](https://github.com/shekark642/slackbots-p2/blob/master/src/main/resources/static/images/Wordle.jpg)
 
 ## Deployment Protocol
