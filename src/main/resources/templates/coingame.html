@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html xmlns:layout="http://www.w3.org/1999/xhtml" xmlns:th="http://www.w3.org/1999/xhtml" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Coingame</title>
+    <link th:href="@{/styles/coingame.css}" rel="stylesheet" />
+</head>
+
+<style>
+    body {
+        background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTQX739a0QSWZI-BTXR329d8XZ6Q8e5GxHl3w&usqp=CAU');
+    }
+</style>
+
+
+<body>
+    <h1>Welcome to Coin Game!</h1>
+    <div class="rules">
+        <h2>Rules:</h2>
+        <h3>1. Each player starts with 20 coins</h3>
+        <h3>2. Same rule: If both players spend the same number of coins, player 2 gains 1 coin</h3>
+        <h3>3. Off-by-one rule: If the players do not spend the same number of coins and the positive difference between the number of coins spent by the two players is 1, player 2 is awarded 1 coin.</h3>
+        <h3>4. Off-by-two rule: If the players do not spend the same number of coins and the positive difference between the number of coins spent by the two players is 2, player 1 is awarded 2 coins.</h3>
+    </div>
+    <div class="row">
+        <div class="column">
+            <h3>Player 1</h3>
+            <form th:action="@{/coingame}" method="POST" th:object="${game}">
+                <hr>
+                <section class="input">
+                    <label>How many coins would you like to spend?</label>
+                    <input type="number" min="1" max="3" th:field="*{p1Input}">
+                    <button type="submit">Submit</button>
+                </section>
+                <hr>
+            </form>
+            <h4>P1 Spends:</h4>
+            <span th:text="${p1spend}" id="output"></span>
+        </div>
+        <div class="column">
+            <h3>Results:</h3>
+            <h4>P1 Coins:</h4>
+            <span th:text="${p1Coins}" id="output"></span>
+            <h4>P2 Coins:</h4>
+            <span th:text="${p2Coins}" id="output"></span>
+        </div>
+        <div class="column">
+            <h3>Player 2</h3>
+            <hr>
+            <h4>Player 2 will be spending</h4>
+            <span th:text="${p2spend}" id="output"></span>
+            <h4> coins</h4>
+            <hr>
+        </div>
+    </div>
+</body>
+</html>
+

@@ -8,42 +8,38 @@ import java.util.Random;
 /* This is just the starting class for Rock Paper Scissors - Goes over the entire file */
 public class RPS {
 
-    private String playerchoice;
-    public String getPlayerchoice() { return playerchoice; }
-    public void setPlayerchoice(String newPlayerchoice) { this.playerchoice = newPlayerchoice; }
-
-
-
+    public static int playerpoints = 0;
+    public static int cpupoints = 0;
+    public static int input;
+    public int getInput() {return input;}
+    public void setInput(int newInput) { this.input = newInput; }
     /* By making this public, we are allowing the entire file to be able to call this */
     /* static makes it a class related method and makes it so that the original can't change or be manipulated */
     /* void makes it so the main() method doesn't return anything */
     /* main is just kind of a word that we can use (we can name it anything) but we set it as main to state that it is the starting point */
     /* String[] args is sort of an array type but it can be named anything */
-    public static void main(String[] args) {
+    /**public static void main(String[] args) {
 
         // We seperate this function from the rest so we can repeat the game over a few times
-        /* We want the user to choose what they want, so we have to use a scanner class to get that input */
+        /* We want the user to choose what they want, so we have to use a scanner class to get that input
         Scanner scanner = new Scanner(System.in);
 
         System.out.println("How many rounds would you like to play?");
         int rounds = Integer.parseInt(scanner.nextLine());
 
         for (int i = 0; i < rounds; i++) {
-            playgame(scanner);
+            playGame(scanner);
         }
 
 
-    }
+    }*/
 
-    static void playgame(Scanner scanner) {
-
-        int playerpoints = 0;
-        int cpupoints = 0;
+    public int playGame() {
 
         //First we have our regular string that tells the player to choose one of those following options
         System.out.println("Choose Rock, Paper, or Scissors!: ");
         // we are now creating a new String variable which will take the user's input
-        String playermove = scanner.nextLine();
+        String playermove = "yes";
 
         //Now we are getting a random value from the computer so that we can fight it
         /* We have to include this new Random() thing so that we can create a new instance of a new "Random" class and you are essentially
@@ -82,7 +78,8 @@ public class RPS {
         System.out.println("You have " + playerpoints + "points!");
         System.out.println("The CPU has " + cpupoints + "points!");
 
-        RPS.main(null);
+        //RPS.main(null);
+        return cpunumber;
     }
 
     // Now we are going to be creating the function that checks if the cpu or the player wins

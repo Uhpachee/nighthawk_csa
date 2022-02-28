@@ -1,0 +1,77 @@
+h1 {
+    color: black;
+    font-size: 50px;
+    font-weight: 600;
+    text-align: center;
+}
+
+.rules {
+    border: 5px dotted red;
+    color: red;
+}
+
+h2 {
+    font-size: 40px;
+    line-height: 48px;
+    padding: 10px 15px;
+    margin: 10px 10px;
+    text-align: center;
+}
+
+h3 {
+    color: black;
+    font-size: 30px;
+    text-align: center;
+}
+
+h4 {
+    font-size: 15px;
+    text-align: center;
+}
+
+
+p {
+    color: blue;
+    font-size: 20px;
+    text-align: center;
+}
+
+.playercolumn {
+    float: left;
+    width: 30%;
+    border: 5px solid black;
+    text-align: center;
+}
+
+.column {
+    float: left;
+    width: 31%;
+    border: 5px solid black;
+    padding: 2px 3px;
+    margin: 3px 2px;
+}
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.input {
+    text-align: center;
+}
+
+.results {
+    text-align: center;
+}
+
+#output {
+    border: 3px solid black;
+    padding: 10px 20px;
+    font-size: 30px;
+    text-align: center;
+    margin: 5px 80px;
+    display: block;
+    background-image: url("https://static.wikia.nocookie.net/nintendo/images/2/2f/Coin_-_New_Super_Mario_Bros.png/revision/latest?cb=20151206061007&path-prefix=en");
+}
+}
