@@ -3,7 +3,7 @@ import java.util.*;
 
 public class Sudoku {
     //initializing variables
-    static int[][] full = new int[9][9];
+    int[][] full = new int[9][9];
     ArrayList<Integer> numbers = new ArrayList<Integer>(Arrays.asList(1, 2, 3, 4, 5, 6, 7, 8, 9));
     static boolean run = false;
     ArrayList<Integer> setNumbs = new ArrayList<>();
@@ -160,6 +160,7 @@ public class Sudoku {
             }
             System.out.printf("\n");
         }
+        System.out.printf("\naaaaaaaa");
         return starter;
     }
 
